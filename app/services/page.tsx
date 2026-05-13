@@ -6,7 +6,7 @@ const detailedServices = [
     icon: Route,
     title: "FREIGHT DISPATCHING",
     details: [
-      "Access to premium load boards and private networks.",
+      "Access to major load boards and a vetted broker network.",
       "Strategic route planning to minimize empty miles.",
       "Bilingual dispatchers for clear communication.",
       "Specialized dispatching for Dry Van, Reefer, Flatbed, and Step Deck.",
@@ -55,7 +55,7 @@ export function DetailedServices() {
         <div className="text-center mb-24">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-12 h-[2px] bg-[#e31837]" />
-            <p className="text-[#e31837] text-sm font-black tracking-[0.2em] uppercase">Premium Offerings</p>
+            <p className="text-[#e31837] text-sm font-black tracking-[0.2em] uppercase">Service Overview</p>
             <div className="w-12 h-[2px] bg-[#e31837]" />
           </div>
           <h2 className="text-4xl md:text-6xl font-black text-[#0a1628] uppercase tracking-tight">
@@ -126,10 +126,10 @@ export default function ServicesPage() {
             <div className="w-10 h-[2px] bg-[#e31837]" />
           </div>
           <h1 className="text-5xl md:text-7xl font-black text-white uppercase mb-8 tracking-tight">
-            OUR ELITE <span className="text-[#e31837]">SERVICES</span>
+            OUR SERVICES
           </h1>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg md:text-xl font-medium leading-relaxed">
-            Unrivaled expertise in load management, rate negotiation, and administrative excellence for the modern carrier.
+            Practical expertise in load management, rate negotiation, and administrative support designed for today’s carriers.
           </p>
         </div>
       </section>
@@ -150,13 +150,13 @@ export default function ServicesPage() {
             </div>
             <div className="p-10 border border-white/5 bg-white/5 rounded-2xl hover:border-[#e31837]/30 transition-all group">
               <Headphones className="w-16 h-16 text-[#e31837] mx-auto mb-8 transition-transform group-hover:scale-110 duration-300" strokeWidth={1} />
-              <h4 className="text-xl font-black mb-4 uppercase tracking-tight">24/7 ELITE SUPPORT</h4>
-              <p className="text-gray-400 text-sm font-medium leading-relaxed">A dedicated team of logistics experts available at every hour to manage your operational needs.</p>
+              <h4 className="text-xl font-black mb-4 uppercase tracking-tight">24/7 SUPPORT</h4>
+              <p className="text-gray-400 text-sm font-medium leading-relaxed">A dedicated team of logistics specialists available to help you manage operational needs when they arise.</p>
             </div>
             <div className="p-10 border border-white/5 bg-white/5 rounded-2xl hover:border-[#e31837]/30 transition-all group">
               <Zap className="w-16 h-16 text-[#e31837] mx-auto mb-8 transition-transform group-hover:scale-110 duration-300" strokeWidth={1} />
               <h4 className="text-xl font-black mb-4 uppercase tracking-tight">ACCELERATED SETUP</h4>
-              <p className="text-gray-400 text-sm font-medium leading-relaxed">Our streamlined onboarding process gets your fleet moving premium loads within 24 hours.</p>
+              <p className="text-gray-400 text-sm font-medium leading-relaxed">Our onboarding is designed to connect you with load opportunities quickly and keep operations moving.</p>
             </div>
           </div>
         </div>

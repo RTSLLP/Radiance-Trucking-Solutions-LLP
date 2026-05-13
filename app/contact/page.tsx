@@ -46,8 +46,8 @@ export default function ContactPage() {
                 <Phone className="w-6 h-6" />
               </div>
               <h4 className="text-xl font-black text-[#0a1628] uppercase tracking-tight">Direct Line</h4>
-              <p className="text-gray-500 font-medium">(555) 123-4567</p>
-              <p className="text-gray-400 text-sm">Available for urgent dispatch inquiries.</p>
+              <p className="text-gray-500 font-medium">+91 95186 08147</p>
+              <p className="text-gray-400 text-sm">(WhatsApp Business Available!)</p>
             </div>
 
             <div className="space-y-4">
@@ -55,10 +55,10 @@ export default function ContactPage() {
                 <Mail className="w-6 h-6" />
               </div>
               <h4 className="text-xl font-black text-[#0a1628] uppercase tracking-tight">Email Support</h4>
-              <a href="#get-started-today" className="text-gray-500 font-medium hover:text-[#e31837] transition-colors">
-                contactus@radiancetruckin.com
+              <a href="mailto:contactus@radiancetrucking.com" className="text-gray-500 font-medium hover:text-[#e31837] transition-colors">
+                contactus@radiancetrucking.com
               </a>
-              <p className="text-gray-400 text-sm">Typical response time: under 30 minutes.</p>
+              <p className="text-gray-400 text-sm">We aim to respond promptly and professionally to every inquiry.</p>
             </div>
 
             <div className="space-y-4">

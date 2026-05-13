@@ -16,15 +16,15 @@ export default function Home() {
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
             <div className="max-w-2xl">
               <p className="text-[#e31837] text-xs font-black tracking-[0.3em] uppercase mb-4">
-                Real-Time View
+                Cockpit Clarity
               </p>
               <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tight leading-tight">
-                CLEAR CAB VIEW
+                COCKPIT CLARITY
                 <br />
-                FOR BETTER CONTROL
+                FOR SMARTER ROUTES
               </h2>
               <p className="mt-6 text-gray-300 text-lg leading-relaxed max-w-xl">
-                A clean, high-definition dashboard view that fits the site theme and keeps the focus on the driving experience, not exterior branding.
+                A driver-focused view designed to make load details, route timing, and broker communication easier to scan at a glance. This layout keeps your attention on what matters most: staying loaded, compliant, and moving safely.
               </p>
             </div>
 

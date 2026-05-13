@@ -44,24 +44,24 @@ export default function AboutPage() {
                 <p className="text-[#e31837] text-xs font-black tracking-[0.2em] uppercase">Who We Are</p>
               </div>
               <h2 className="text-4xl md:text-5xl font-black text-[#0a1628] mb-8 tracking-tight uppercase leading-tight">
-                ELITE DISPATCHING FOR <br />
-                <span className="text-[#e31837]">PREMIUM CARRIERS</span>
+                EXPERIENCED DISPATCH SUPPORT FOR <br />
+                <span className="text-[#e31837]">OWNER-OPERATORS</span>
               </h2>
               <p className="text-gray-600 mb-6 text-lg leading-relaxed font-medium">
-                Established with a vision to revolutionize the dispatch industry, RTS provides unparalleled support to owner-operators and small fleets across the USA and Canada. We understand that your truck is your business, and we treat it with the respect it deserves.
+                RTS was founded by dispatch professionals who know the pressure owner-operators and small fleets face every day: rising operating costs, broker complexity, and increasing regulatory overhead. Our focus is practical support that helps carriers make better decisions and protect their margins.
               </p>
               <p className="text-gray-600 mb-10 text-lg leading-relaxed font-medium">
-                Our elite team of dispatchers leverages cutting-edge technology and deep industry relationships to ensure you stay loaded, profitable, and compliant. We manage the complexity, so you can focus on the road.
+                North America still relies on trucking for the majority of freight movement, and that means predictable loads, clear paperwork, and reliable communication are more important than ever. We help partners keep trucks moving with documented broker agreements, lane-aware load selection, and compliance guidance built around real industry needs.
               </p>
               
               <div className="grid grid-cols-2 gap-8 py-8 border-t border-gray-100">
                 <div>
-                  <h4 className="text-[#0a1628] font-black text-lg mb-2 uppercase">STRATEGY</h4>
-                  <p className="text-gray-500 text-sm font-medium">Data-driven load matching and route optimization.</p>
+                  <h4 className="text-[#0a1628] font-black text-lg mb-2 uppercase">OPERATING SMARTER</h4>
+                  <p className="text-gray-500 text-sm font-medium">Market-aware load planning that reduces empty miles and improves run consistency.</p>
                 </div>
                 <div>
-                  <h4 className="text-[#0a1628] font-black text-lg mb-2 uppercase">RELIABILITY</h4>
-                  <p className="text-gray-500 text-sm font-medium">24/7 dedicated support for every mile you drive.</p>
+                  <h4 className="text-[#0a1628] font-black text-lg mb-2 uppercase">DOCUMENTED SUPPORT</h4>
+                  <p className="text-gray-500 text-sm font-medium">Clear broker paperwork, compliance checks, and communication so you stay in control.</p>
                 </div>
               </div>
             </div>
@@ -77,9 +77,9 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/40 to-transparent" />
               </div>
               {/* Floating Badge */}
-              <div className="absolute -bottom-8 -left-8 bg-[#e31837] text-white p-8 rounded-xl shadow-2xl hidden md:block">
-                <p className="text-3xl font-black">100%</p>
-                <p className="text-[10px] font-black tracking-[0.2em] uppercase opacity-80">Carrier Satisfaction</p>
+              <div className="absolute -bottom-8 -left-8 bg-[#e31837] text-white p-6 rounded-xl shadow-2xl hidden md:block">
+                <p className="text-3xl font-black">CARRIER</p>
+                <p className="text-[10px] font-black tracking-[0.2em] uppercase opacity-80">FOCUSED SUPPORT</p>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function AboutPage() {
             <div className="w-16 h-1 bg-[#e31837] mt-6" />
           </div>
           <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed text-xl font-medium italic">
-            "To become the gold standard of dispatching in North America, empowering every driver with the tools and support to build a legacy of success."
+            "To build a dependable dispatch service recognized for clear communication, consistent support, and practical carrier-first solutions."
           </p>
         </div>
       </section>

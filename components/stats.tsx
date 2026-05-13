@@ -8,8 +8,8 @@ const stats = [
   },
   {
     icon: Users,
-    value: "500+",
-    label: "HAPPY CLIENTS",
+    value: "",
+    label: "CARRIER PARTNERSHIPS",
   },
   {
     icon: Clock,

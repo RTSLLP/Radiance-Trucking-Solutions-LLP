@@ -7,9 +7,9 @@ import Image from "next/image"
 const benefits = [
   "We work as your back office so you can focus on driving.",
   "No forced dispatch – you decide which load to take.",
-  "Transparent communication and honest approach.",
-  "We treat your business like our own.",
-  "100% dedicated to increasing your profits.",
+  "Transparent communication and an honest approach.",
+  "We treat your business with respect and clarity.",
+  "Focused on steady load opportunities and reliable carrier support.",
 ]
 
 export function WhyChooseUs() {

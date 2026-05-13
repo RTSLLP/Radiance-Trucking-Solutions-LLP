@@ -44,10 +44,10 @@ export function HowWeWorkContent() {
             <div className="w-12 h-[2px] bg-[#e31837]" />
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-[#0a1628] uppercase tracking-tight">
-            OUR STRATEGIC <span className="text-[#e31837]">PARTNERSHIP</span>
+            OUR OPERATIONAL <span className="text-[#e31837]">PARTNERSHIP</span>
           </h2>
           <p className="text-gray-500 mt-6 max-w-2xl mx-auto text-lg leading-relaxed font-medium">
-            A high-performance operational framework designed to eliminate administrative friction and maximize your revenue at every mile.
+            A practical operational framework designed to reduce administrative friction and keep your business moving with fewer surprises.
           </p>
         </div>
 
@@ -96,7 +96,7 @@ export default function HowWeWorkPage() {
               <span className="text-[#e31837]">EXECUTE</span>
             </h1>
             <p className="text-gray-300 max-w-xl text-lg md:text-xl font-medium leading-relaxed">
-              We deploy elite-level logistics management to ensure your business remains profitable, compliant, and focused on the journey ahead.
+              We manage dispatch, documentation, and communication so you retain control of your business while keeping compliance and operations aligned.
             </p>
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function HowWeWorkPage() {
         
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <div className="flex flex-col items-center mb-10">
-            <p className="text-[#e31837] text-[10px] font-black tracking-[0.3em] uppercase mb-4">Elite Policy</p>
+            <p className="text-[#e31837] text-[10px] font-black tracking-[0.3em] uppercase mb-4">Carrier Policy</p>
             <h2 className="text-4xl font-black text-[#0a1628] tracking-tight uppercase">NO FORCED DISPATCH</h2>
             <div className="w-16 h-1 bg-[#e31837] mt-6" />
           </div>

@@ -80,18 +80,19 @@ export function Contact() {
             {/* Contact Info */}
             <div className="space-y-4">
               <a
-                href="tel:5551234567"
+                href="tel:+919518608147"
                 className="flex items-center gap-3 text-white hover:text-[#e31837] transition-colors"
               >
                 <Phone className="w-5 h-5 text-[#e31837]" />
-                <span className="text-sm">(555) 123-4567</span>
+                <span className="text-sm">+91 95186 08147</span>
               </a>
+              <p className="text-gray-400 text-xs ml-8 mt-0.5">(WhatsApp Business Available!)</p>
               <a
-                href="#get-started-today"
+                href="mailto:contactus@radiancetrucking.com"
                 className="flex items-center gap-3 text-white hover:text-[#e31837] transition-colors"
               >
                 <Mail className="w-5 h-5 text-[#e31837]" />
-                <span className="text-sm">contactus@radiancetruckin.com</span>
+                <span className="text-sm">contactus@radiancetrucking.com</span>
               </a>
               <div className="flex items-center gap-3 text-white">
                 <MapPin className="w-5 h-5 text-[#e31837]" />
