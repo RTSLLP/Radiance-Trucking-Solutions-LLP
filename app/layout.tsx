@@ -11,9 +11,20 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Radiance Trucking Solutions LLP | Professional Truck Dispatch Services',
-  description: 'Professional truck dispatch services for owner-operators and fleets across USA & Canada. Keep your trucks moving and maximize your profits with RTS.',
-  keywords: 'truck dispatch, trucking services, owner-operators, fleet management, USA trucking, Canada trucking',
+  title:
+    'Radiance Trucking Solutions LLP | Freight Brokerage, Dispatch & Logistics Solutions USA & Canada',
+
+  description:
+    'Radiance Trucking Solutions LLP provides professional freight brokerage, truck dispatch, logistics coordination, carrier support, and transportation solutions across the United States and Canada. Helping owner-operators, carriers, brokers, and shippers maximize efficiency, profits, and reliable freight movement.',
+
+  keywords:
+    'freight brokerage, truck dispatch services, logistics company USA, logistics company Canada, owner operator dispatch, truck dispatcher, freight broker, trucking company, carrier support, logistics solutions, dry van loads, reefer loads, flatbed dispatch, dedicated lanes, owner operator trucking, fleet management, trucking dispatch services, load booking, freight management, transportation services, USA trucking, Canada trucking, trucking operations, dispatch services for owner operators, logistics coordination, freight solutions, trucking business support, load planning, freight carriers, trucking dispatch company',
+
+  icons: {
+    icon: '/rts-icon.png',
+    shortcut: '/rts-icon.png',
+    apple: '/rts-icon.png',
+  },
 }
 
 export default function RootLayout({
