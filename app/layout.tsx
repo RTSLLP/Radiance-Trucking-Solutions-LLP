@@ -5,7 +5,7 @@ import { TopBar } from "@/components/top-bar"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
 })
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     'Radiance Trucking Solutions LLP provides professional freight brokerage, truck dispatch, carrier support, load planning, logistics coordination, and transportation management services across the United States and Canada. Trusted dispatch solutions for owner-operators, trucking fleets, carriers, brokers, and shippers seeking reliable freight movement and profitable loads.',
 
   keywords:
-    'freight brokerage, freight broker USA, freight broker Canada, truck dispatch services, owner operator dispatch, trucking dispatch company, logistics company, transportation company, logistics solutions, trucking services, dispatch services for owner operators, trucking carrier support, dry van loads, reefer loads, flatbed dispatch, hotshot dispatch, trucking logistics, load booking service, freight management, dedicated lanes, freight coordination, trucking operations, fleet dispatching,truck dispatch services USA, truck dispatch services Canada, freight brokerage company, freight broker USA, freight broker Canada, trucking dispatch company, owner operator dispatch services, dispatch services for trucking companies, logistics company USA, logistics company Canada, transportation company USA, transportation company Canada, freight dispatch company, trucking company dispatch, dry van dispatch services, reefer dispatch services, flatbed dispatch services, hotshot dispatch services, power only dispatch, carrier setup services, freight management services, logistics coordination, supply chain logistics, trucking logistics company, freight transportation solutions, trucking operations management, truck load booking, load planning services, trucking carrier support, owner operator support services, trucking fleet dispatch, dispatch company for owner operators, trucking solutions provider, load board management, freight scheduling, dedicated freight lanes, OTR trucking dispatch, trucking back office support, truck dispatcher USA, truck dispatcher Canada, freight forwarding support, transportation logistics solutions, logistics and dispatch company, trucking compliance support, freight movement solutions, carrier dispatch services, trucking industry services, Radiance Trucking Solutions LLP, carrier packet setup, trucking company USA, trucking company Canada, truck dispatcher, freight solutions, owner operator trucking, dispatch company, logistics provider, transportation management, freight transportation, trucking loads, truck load management, trucking industry services',
+    'truck dispatch services USA, truck dispatch services Canada, freight brokerage company, freight broker USA, freight broker Canada, trucking dispatch company, owner operator dispatch services, dispatch services for trucking companies, logistics company USA, logistics company Canada, transportation company USA, transportation company Canada, freight dispatch company, trucking company dispatch, dry van dispatch services, reefer dispatch services, flatbed dispatch services, hotshot dispatch services, power only dispatch, carrier setup services, freight management services, logistics coordination, supply chain logistics, trucking logistics company, freight transportation solutions, trucking operations management, truck load booking, load planning services, trucking carrier support, owner operator support services, trucking fleet dispatch, dispatch company for owner operators, trucking solutions provider, load board management, freight scheduling, dedicated freight lanes, OTR trucking dispatch, trucking back office support, truck dispatcher USA, truck dispatcher Canada, freight forwarding support, transportation logistics solutions, logistics and dispatch company, trucking compliance support, freight movement solutions, carrier dispatch services, trucking industry services, Radiance Trucking Solutions LLP',
 
   authors: [{ name: 'Radiance Trucking Solutions LLP' }],
 
@@ -36,15 +36,17 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
- icons: {
-  icon: [
-    { url: '/favicon.ico' },
-    { url: '/favicon.svg', type: 'image/svg+xml' },
-    { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-  ],
-  shortcut: '/favicon.ico',
-  apple: '/apple-touch-icon.png',
-},
+  },
+
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
 
   openGraph: {
     title:
@@ -70,6 +72,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
 }
+
 export default function RootLayout({
   children,
 }: Readonly<{
