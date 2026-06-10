@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { TopBar } from "@/components/top-bar"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
@@ -81,7 +80,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-white scroll-smooth">
       <body className={`${inter.variable} font-sans antialiased`}>
-        <TopBar />
         <Header />
         {children}
         <Footer />

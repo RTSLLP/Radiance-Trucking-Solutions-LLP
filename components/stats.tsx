@@ -3,24 +3,23 @@ import { CheckCircle, Users, Clock, FileText } from "lucide-react"
 const stats = [
   {
     icon: CheckCircle,
-    value: "100%",
-    label: "COMMITMENT",
+    value: "Operational",
+    label: "Carrier reliability",
   },
   {
     icon: Users,
-    value: "",
-    label: "CARRIER PARTNERSHIPS",
+    value: "Trusted",
+    label: "Carrier relationships",
   },
   {
     icon: Clock,
     value: "24/7",
-    label: "SUPPORT",
+    label: "Support",
   },
   {
     icon: FileText,
-    value: "",
-    label: "COMPLIANCE &",
-    sublabel: "PAPERWORK",
+    value: "Compliant",
+    label: "Documentation",
   },
 ]
 

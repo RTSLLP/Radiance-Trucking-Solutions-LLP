@@ -4,23 +4,23 @@ export function Logo({ variant = "default" }: { variant?: "default" | "footer" }
   if (variant === "footer") {
     return (
       <Image
-        src="/global-mark.jpeg"
+        src="/assets/branding/horizontal-logo.png"
         alt="RTS - Radiance Trucking Solutions"
-        width={120}
-        height={108}
+        width={240}
+        height={70}
         className="object-contain"
       />
     )
   }
 
-  // Header logo - using full logo image at prominent size
+  // Header logo - premium horizontal shiny logo
   return (
     <Image
-      src="/full-logo.jpeg"
-      alt="Radiance Trucking Solutions LLP - Dispatch | Brokerage | Compliance | Safety"
-      width={400}
-      height={100}
-      className="object-contain h-[100px] md:h-[110px] w-auto"
+      src="/assets/branding/horizontal-logo-shiny.png"
+      alt="Radiance Trucking Solutions LLP"
+      width={280}
+      height={72}
+      className="object-contain h-[68px] w-auto"
       priority
     />
   )

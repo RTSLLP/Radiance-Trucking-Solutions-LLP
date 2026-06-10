@@ -4,47 +4,47 @@ import { Route, TrendingUp, ShieldCheck, Headphones, Receipt, Zap, Navigation } 
 const detailedServices = [
   {
     icon: Route,
-    title: "FREIGHT DISPATCHING",
+    title: "Dispatch Coordination",
     details: [
-      "Access to major load boards and a vetted broker network.",
-      "Strategic route planning to minimize empty miles.",
-      "Bilingual dispatchers for clear communication.",
-      "Specialized dispatching for Dry Van, Reefer, Flatbed, and Step Deck.",
+      "Carrier-focused route planning and dispatch execution.",
+      "Direct coordination with brokers, shippers, and drivers.",
+      "Load confirmations aligned with carrier capabilities.",
+      "Real-time adjustments to keep operations moving.",
     ],
-    image: "https://img.freepik.com/premium-photo/big-rig-semi-truck-cargo-highway-road_140916-53825.jpg?semt=ais_hybrid&w=740&q=80",
+    image: "/assets/branding/cover-image.png",
   },
   {
     icon: TrendingUp,
-    title: "BROKERAGE AGREEMENT",
+    title: "Broker Relations",
     details: [
-      "Comprehensive broker relationship management and vetting.",
-      "Fair and transparent agreement terms negotiated for your benefit.",
-      "Protection of your rights with documented carrier-broker agreements.",
-      "Ongoing compliance monitoring and dispute resolution support.",
+      "Strategic broker communication on behalf of the carrier.",
+      "Negotiation support centered on carrier authority.",
+      "Transparent terms and documented coordination.",
+      "Ongoing management of broker expectations.",
     ],
-    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=90",
+    image: "/assets/branding/cover-image.png",
   },
   {
     icon: ShieldCheck,
-    title: "COMPLIANCE & ADMIN",
+    title: "Compliance Support",
     details: [
-      "Management of carrier packets and broker setup.",
-      "Processing of Rate Confirmations and BOLs.",
-      "Assistance with IFTA, DOT, and ELD compliance.",
-      "Streamlined invoicing and factoring company liaison.",
+      "Assistance with rate confirmations, BOLs, and paperwork.",
+      "Documentation workflows designed for carrier readiness.",
+      "Support for IFTA, DOT, and operational compliance.",
+      "Back-office coordination that reduces administrative friction.",
     ],
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=90",
+    image: "/assets/branding/cover-image.png",
   },
   {
     icon: Receipt,
-    title: "BILLING & FACTORING",
+    title: "Driver Assistance",
     details: [
-      "Submit invoices immediately after delivery.",
-      "Quick-pay and factoring setup assistance.",
-      "Weekly revenue reporting for your fleet.",
-      "Follow-up on aging accounts and late payments.",
+      "Responsive driver support during each shipment.",
+      "Check calls, updates, and issue escalation.",
+      "Alignment with carrier preferences and operational plans.",
+      "Support for safe, compliant load execution.",
     ],
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=90",
+    image: "/assets/branding/cover-image.png",
   },
 ]
 
@@ -52,49 +52,35 @@ export function DetailedServices() {
   return (
     <section className="py-24 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-24">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-[2px] bg-[#e31837]" />
-            <p className="text-[#e31837] text-sm font-black tracking-[0.2em] uppercase">Service Overview</p>
-            <div className="w-12 h-[2px] bg-[#e31837]" />
-          </div>
-          <h2 className="text-4xl md:text-6xl font-black text-[#0a1628] uppercase tracking-tight">
-            COMPREHENSIVE <span className="text-[#e31837]">SOLUTIONS</span>
+        <div className="text-center mb-20">
+          <p className="text-[#e31837] text-sm font-semibold tracking-[0.2em] uppercase mb-3">Service Details</p>
+          <h2 className="text-3xl md:text-4xl font-black text-[#0a1628] uppercase tracking-tight">
+            Our service suite
           </h2>
-          <p className="text-gray-500 mt-6 max-w-2xl mx-auto text-lg leading-relaxed font-medium">
-            We provide a suite of high-performance services designed to optimize every facet of your trucking business.
+          <p className="text-slate-600 mt-4 max-w-2xl mx-auto text-base leading-relaxed">
+            From dispatch coordination to driver support, we cover every critical function of carrier operations.
           </p>
         </div>
 
-        <div className="space-y-32">
+        <div className="space-y-20">
           {detailedServices.map((service, index) => (
             <div 
               key={index} 
-              id={["dispatch", "brokerage", "compliance", "safety"][index]}
-              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 lg:gap-24 items-center scroll-mt-32`}
+              id={["dispatch", "broker-relations", "compliance", "driver-support"][index]}
+              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-20 items-center scroll-mt-32`}
             >
-              <div className="flex-1 w-full">
-                <div className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] group">
-                  <img 
-                    src={service.image} 
-                    alt={service.title} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/60 via-transparent to-transparent opacity-60" />
-                </div>
-              </div>
-              <div className="flex-1 space-y-8">
-                <div className="flex items-center gap-6">
-                  <div className="w-16 h-16 bg-[#0a1628] rounded-2xl flex items-center justify-center text-white shadow-xl group hover:bg-[#e31837] transition-colors duration-300">
-                    <service.icon className="w-8 h-8" strokeWidth={1.5} />
+              <div className="flex-1 space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 bg-[#0a1628] rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                    <service.icon className="w-7 h-7" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-black text-[#0a1628] uppercase tracking-tight leading-tight">{service.title}</h3>
+                  <h3 className="text-2xl font-black text-[#0a1628] uppercase tracking-tight">{service.title}</h3>
                 </div>
-                <ul className="space-y-5">
+                <ul className="space-y-3">
                   {service.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-start gap-4">
-                      <div className="w-2 h-2 rounded-full bg-[#e31837] mt-2.5 flex-shrink-0" />
-                      <p className="text-gray-600 leading-relaxed text-lg font-medium">{detail}</p>
+                    <li key={idx} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#e31837] mt-2 flex-shrink-0" />
+                      <p className="text-slate-700 leading-relaxed text-sm">{detail}</p>
                     </li>
                   ))}
                 </ul>
@@ -110,27 +96,21 @@ export function DetailedServices() {
 export default function ServicesPage() {
   return (
     <main className="min-h-screen">
-      <section className="bg-[#0a1628] py-32 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-40">
-          <img 
-            src="https://img.freepik.com/premium-photo/big-rig-semi-truck-cargo-highway-road_140916-53825.jpg?semt=ais_hybrid&w=740&q=80" 
-            alt="Elite Services" 
+      <section className="bg-slate-950 py-20 relative overflow-hidden text-white">
+        <div className="absolute inset-0 opacity-15">
+          <img
+            src="/assets/branding/cover-image.png"
+            alt="Service operations"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a1628] via-[#0a1628]/80 to-[#0a1628]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/95 to-slate-950" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-10 h-[2px] bg-[#e31837]" />
-            <p className="text-[#e31837] text-xs font-black tracking-[0.3em] uppercase">Service Portfolio</p>
-            <div className="w-10 h-[2px] bg-[#e31837]" />
+        <div className="relative mx-auto max-w-7xl px-4">
+          <div className="max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.32em] text-[#e31837] mb-3">Service portfolio</p>
+            <h1 className="text-4xl font-black tracking-tight sm:text-5xl leading-tight">Carrier operations services.</h1>
+            <p className="mt-6 text-base leading-8 text-slate-300 sm:text-lg">Dispatch coordination, broker relations, compliance support, and driver assistance.</p>
           </div>
-          <h1 className="text-5xl md:text-7xl font-black text-white uppercase mb-8 tracking-tight">
-            OUR SERVICES
-          </h1>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg md:text-xl font-medium leading-relaxed">
-            Practical expertise in load management, rate negotiation, and administrative support designed for today’s carriers.
-          </p>
         </div>
       </section>
 

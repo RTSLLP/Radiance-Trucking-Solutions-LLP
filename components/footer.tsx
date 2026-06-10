@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Phone, Mail, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin } from "lucide-react"
 import { Logo } from "./logo"
 
 const quickLinks = [
@@ -11,36 +11,30 @@ const quickLinks = [
 ]
 
 const serviceLinks = [
-  { name: "Dispatch", href: "/services#dispatch" },
-  { name: "Brokerage Agreement", href: "/services#brokerage" },
-  { name: "Compliance", href: "/services#compliance" },
-  { name: "Safety", href: "/services#safety" },
+  { name: "Dispatch Coordination", href: "/services#dispatch" },
+  { name: "Broker Relations", href: "/services#broker-relations" },
+  { name: "Compliance Support", href: "/services#compliance" },
+  { name: "Driver Assistance", href: "/services#driver-support" },
 ]
 
 export function Footer() {
   return (
-    <footer className="bg-[#070f1a] text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Logo & Description */}
-          <div className="lg:col-span-1">
+    <footer className="bg-slate-950 text-slate-200">
+      <div className="max-w-7xl mx-auto px-4 py-14 sm:py-16">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+          <div className="space-y-6">
             <Logo variant="footer" />
-            <p className="text-gray-400 text-sm mt-4 leading-relaxed">
-              RTS is a trusted dispatch partner for owner-operators and fleets across 
-              USA & Canada. We deliver loads, maximize profits, and drive success.
+            <p className="max-w-md text-sm leading-7 text-slate-400">
+              RTS provides premium dispatch coordination, carrier operations support, and compliance services for authorized motor carriers across North America.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-white mb-4 text-sm tracking-wide">QUICK LINKS</h4>
-            <ul className="space-y-2">
+            <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-300 mb-4">Quick Links</h4>
+            <ul className="space-y-3 text-sm text-slate-400">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-[#e31837] text-sm transition-colors"
-                  >
+                  <Link href={link.href} className="transition hover:text-[#e31837]">
                     {link.name}
                   </Link>
                 </li>
@@ -48,16 +42,12 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Our Services */}
           <div>
-            <h4 className="font-bold text-white mb-4 text-sm tracking-wide">OUR SERVICES</h4>
-            <ul className="space-y-2">
+            <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-300 mb-4">Services</h4>
+            <ul className="space-y-3 text-sm text-slate-400">
               {serviceLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-400 hover:text-[#e31837] text-sm transition-colors"
-                  >
+                  <Link href={link.href} className="transition hover:text-[#e31837]">
                     {link.name}
                   </Link>
                 </li>
@@ -65,66 +55,36 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Us */}
           <div>
-            <h4 className="font-bold text-white mb-4 text-sm tracking-wide">CONTACT US</h4>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="tel:+919518608147"
-                  className="flex items-center gap-3 text-gray-400 hover:text-[#e31837] text-sm transition-colors"
-                >
-                  <Phone className="w-4 h-4 text-[#e31837]" />
-                  +91 95186 08147
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/contact#get-started-today"
-                  className="flex items-center gap-3 text-gray-400 hover:text-[#e31837] text-sm transition-colors"
-                >
-                  <Mail className="w-4 h-4 text-[#e31837]" />
-                  contactus@radiancetrucking.com
-                </a>
-              </li>
-              <li className="text-gray-400 text-xs">
-                (WhatsApp Business Available!)
-              </li>
-              <li className="flex items-center gap-3 text-gray-400 text-sm">
-                <MapPin className="w-4 h-4 text-[#e31837]" />
-                Serving USA & Canada
-              </li>
-            </ul>
+            <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-300 mb-4">Contact</h4>
+            <div className="space-y-4 text-sm text-slate-400">
+              <a href="tel:+919518608147" className="flex items-center gap-3 transition hover:text-[#e31837]">
+                <Phone className="h-4 w-4 text-[#e31837]" />
+                +91 95186 08147
+              </a>
+              <a href="mailto:contactus@radiancetrucking.com" className="flex items-center gap-3 transition hover:text-[#e31837]">
+                <Mail className="h-4 w-4 text-[#e31837]" />
+                contactus@radiancetrucking.com
+              </a>
+              <div className="flex items-center gap-3">
+                <MapPin className="h-4 w-4 text-[#e31837]" />
+                USA & Canada
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-xs">
-              © 2025 Radiance Trucking Solutions LLP (RTS). All Rights Reserved.
-            </p>
-            <div className="flex items-center gap-6">
-              <Link
-                href="#"
-                className="text-gray-500 hover:text-[#e31837] text-xs transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <span className="text-gray-700">|</span>
-              <Link
-                href="#"
-                className="text-gray-500 hover:text-[#e31837] text-xs transition-colors"
-              >
-                Terms & Conditions
-              </Link>
-            </div>
+      <div className="border-t border-slate-800 bg-slate-950/95">
+        <div className="max-w-7xl mx-auto flex flex-col gap-4 px-4 py-6 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs text-slate-500">
+            © 2025 Radiance Trucking Solutions LLP (RTS). All Rights Reserved.
+          </p>
+          <div className="flex flex-col gap-2 text-xs text-slate-500 sm:flex-row sm:items-center sm:gap-6">
+            <p>RTS provides dispatch, administrative, and operational support services for authorized motor carriers.</p>
+            <p>All dispatch activities are performed under carrier authorization.</p>
           </div>
         </div>
-        {/* Red accent bar */}
-        <div className="h-1 bg-gradient-to-r from-transparent via-[#e31837] to-[#e31837]" />
       </div>
     </footer>
   )

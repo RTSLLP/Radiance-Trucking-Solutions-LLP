@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import { usePathname } from "next/navigation"
@@ -7,11 +8,11 @@ import { Menu, X } from "lucide-react"
 import { Logo } from "./logo"
 
 const navLinks = [
-  { name: "HOME", href: "/" },
-  { name: "SERVICES", href: "/services#dispatch" },
-  { name: "ABOUT US", href: "/about" },
-  { name: "HOW WE WORK", href: "/how-we-work" },
-  { name: "CONTACT", href: "/contact" },
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services#dispatch" },
+  { name: "About", href: "/about" },
+  { name: "How We Work", href: "/how-we-work" },
+  { name: "Contact", href: "/contact" },
 ]
 
 export function Header() {
@@ -20,76 +21,61 @@ export function Header() {
   const isLinkActive = (href: string) => pathname === href.split("#")[0]
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl shadow-sm border-b border-slate-200/50">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-[115px]">
-          {/* Logo Section */}
-          <Link href="/" className="flex-shrink-0 flex items-center">
+        <div className="flex items-center justify-between h-[88px] md:h-[96px]">
+          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Logo />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+          <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold tracking-[0.18em] uppercase">
             {navLinks.map((link) => {
               const isActive = isLinkActive(link.href)
-              
               return (
-                <div key={link.name} className="relative py-6">
-                  <Link
-                    href={link.href}
-                    className={`text-sm font-bold uppercase tracking-wide transition-colors whitespace-nowrap ${
-                      isActive 
-                        ? "text-[#e31837]" 
-                        : "text-[#0a1628] hover:text-[#e31837]"
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                  {/* Red underline for active link */}
-                  {isActive && (
-                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#e31837] rounded-t"></div>
-                  )}
-                </div>
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`transition ${
+                    isActive
+                      ? "text-[#e31837]"
+                      : "text-slate-700 hover:text-[#e31837]"
+                  }`}
+                >
+                  {link.name}
+                </Link>
               )
             })}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center flex-shrink-0">
+          <div className="hidden lg:flex items-center gap-4">
             <Link
               href="/contact"
-              className="bg-[#e31837] hover:bg-[#c41430] text-white px-6 py-3 font-bold text-sm uppercase transition-colors whitespace-nowrap"
+              className="inline-flex items-center justify-center rounded-full bg-[#e31837] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#c41430]"
             >
-              GET A DISPATCHER
+              Contact RTS
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden rounded-full border border-slate-200 p-2 text-slate-700 transition hover:border-slate-300"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? (
-              <X className="w-6 h-6 text-[#0a1628]" />
-            ) : (
-              <Menu className="w-6 h-6 text-[#0a1628]" />
-            )}
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="lg:hidden mt-4 pb-4 border-t border-gray-100 pt-4">
-            <div className="flex flex-col gap-4">
+          <nav className="lg:hidden mt-3 rounded-3xl border border-slate-200 bg-white/95 p-5 shadow-lg shadow-slate-900/5">
+            <div className="space-y-4">
               {navLinks.map((link) => {
                 const isActive = isLinkActive(link.href)
                 return (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`text-sm font-bold uppercase ${
-                      isActive ? "text-[#e31837]" : "text-[#0a1628]"
+                    className={`block text-sm font-semibold uppercase tracking-[0.18em] transition ${
+                      isActive ? "text-[#e31837]" : "text-slate-800 hover:text-[#e31837]"
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -99,10 +85,10 @@ export function Header() {
               })}
               <Link
                 href="/contact"
-                className="bg-[#e31837] text-white px-5 py-2.5 rounded text-sm font-bold uppercase text-center mt-2"
+                className="block rounded-full bg-[#e31837] px-5 py-3 text-center text-sm font-semibold uppercase text-white transition hover:bg-[#c41430]"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                GET A DISPATCHER
+                Contact RTS
               </Link>
             </div>
           </nav>

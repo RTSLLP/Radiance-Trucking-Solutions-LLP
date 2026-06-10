@@ -5,72 +5,50 @@ import Link from "next/link"
 import Image from "next/image"
 
 const benefits = [
-  "We work as your back office so you can focus on driving.",
-  "No forced dispatch – you decide which load to take.",
-  "Transparent communication and an honest approach.",
-  "We treat your business with respect and clarity.",
-  "Focused on steady load opportunities and reliable carrier support.",
+  "Coordinated dispatch execution focused on your operation.",
+  "Clear communication across brokers, dispatch, and drivers.",
+  "Compliance support that reduces administrative burden.",
+  "Operational confidence with carrier authority respected.",
+  "24/7 USA and Canada coverage for your fleet.",
 ]
 
 export function WhyChooseUs() {
   return (
-    <section id="why-choose-us" className="bg-white overflow-hidden py-5">
-      <div className="max-w-[1173px] mx-auto">
-        <div className="grid lg:grid-cols-[47%_53%] min-h-[388px]">
-
-          {/* Left Content */}
-          <div className="relative z-10 px-6 md:px-12 py-10 md:py-11 bg-white">
-            <p className="text-[#e31837] text-[14px] font-black tracking-[0.08em] uppercase mb-3">
-              WHY CHOOSE US
-            </p>
-
-            <h2 className="text-[#071633] text-[28px] md:text-[30px] font-black tracking-[0.04em] leading-tight uppercase mb-4">
-              WE FOCUS ON YOUR SUCCESS
+    <section id="why-choose-us" className="bg-white overflow-hidden py-20">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="space-y-6">
+            <p className="text-sm uppercase tracking-[0.32em] text-[#e31837]">Why work with RTS</p>
+            <h2 className="text-3xl md:text-4xl font-black tracking-tight text-slate-950">
+              Reliable carrier operations support built for your success.
             </h2>
-
-            <div className="relative w-[55px] h-[4px] bg-[#e31837] mb-7">
-              <span className="absolute right-[-7px] top-1/2 -translate-y-1/2 w-[5px] h-[5px] bg-[#e31837] rounded-full" />
-            </div>
-
-            {/* Benefits List */}
-            <ul className="space-y-[14px] mb-7">
+            <div className="space-y-3">
               {benefits.map((benefit) => (
-                <li key={benefit} className="flex items-start gap-3">
-                  <CheckCircle
-                    className="w-[18px] h-[18px] text-[#e31837] flex-shrink-0 mt-[1px]"
-                    strokeWidth={3}
-                  />
-                  <span className="text-[#071633] text-[14px] font-semibold leading-snug">
-                    {benefit}
-                  </span>
-                </li>
+                <div key={benefit} className="flex items-start gap-3 text-slate-700">
+                  <CheckCircle className="mt-0.5 h-5 w-5 text-[#e31837] flex-shrink-0" strokeWidth={2} />
+                  <p className="text-sm leading-6">{benefit}</p>
+                </div>
               ))}
-            </ul>
-
-            {/* CTA Button */}
+            </div>
             <Link
               href="/about"
-              className="inline-flex items-center justify-center gap-3 bg-[#e31837] hover:bg-[#c41430] text-white h-[56px] px-10 rounded-sm font-black text-sm uppercase transition-all shadow-lg hover:shadow-[0_10px_20px_rgba(227,24,55,0.3)] w-fit"
+              className="inline-flex items-center gap-2 rounded-full bg-[#e31837] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#c41430]"
             >
-              Learn More About Us
-              <ArrowRight className="w-4 h-4" strokeWidth={3} />
+              Learn more
+              <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
 
-          {/* Right Image */}
-          <div className="relative min-h-[300px] lg:min-h-[388px] overflow-hidden">
+          <div className="relative overflow-hidden rounded-2xl min-h-[300px] bg-slate-900">
             <Image
-              src="https://cdn.wallpapersafari.com/24/69/xsQt6m.jpg"
+              src="/assets/branding/cover-image.png"
               fill
               priority
-              className="object-cover object-center"
-              alt=""
+              className="object-cover"
+              alt="Carrier operations support"
             />
-
-            {/* Soft white fade on the left side of image */}
-            <div className="absolute inset-y-0 left-0 w-[35%] bg-gradient-to-r from-white via-white/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
           </div>
-
         </div>
       </div>
     </section>

@@ -35,7 +35,7 @@ export function Contact() {
       }
 
       setStatus("success")
-      setStatusMessage("Your message has been sent successfully. We will contact you soon.")
+      setStatusMessage("Thank you for contacting RTS. Our team will review your inquiry and reach out within 1–2 business days.")
       setFormData({
         fullName: "",
         phoneNumber: "",
@@ -63,52 +63,44 @@ export function Contact() {
   return (
     <section id="contact" className="bg-[#0a1628] py-5">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2">
-          {/* Left Content */}
-          <div className="px-4 py-16 md:py-24 lg:pr-12">
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-2">
-              READY TO INCREASE
-              <br />
-              YOUR <span className="text-[#e31837]">PROFITS?</span>
-            </h2>
-
-            <p className="text-gray-300 text-sm leading-relaxed mb-8 max-w-md">
-              Partner with Radiance Trucking Solutions and experience professional 
-              dispatch services that keep your trucks loaded and your business growing.
+        <div className="grid gap-10 lg:grid-cols-2">
+          <div className="rounded-[32px] bg-slate-950/95 px-6 py-14 shadow-[0_30px_80px_rgba(0,0,0,0.22)] sm:px-10 sm:py-16 lg:px-12">
+            <p className="text-sm uppercase tracking-[0.32em] text-[#e31837] mb-4">Carrier Operations Inquiry</p>
+            <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl">Partner with RTS for better operational clarity.</h2>
+            <p className="mt-6 max-w-xl text-sm leading-7 text-slate-300 sm:text-base">
+              We provide coordinated dispatch support, broker relations, and compliance operations for authorized carriers in North America.
             </p>
 
-            {/* Contact Info */}
-            <div className="space-y-4">
-              <a
-                href="tel:+919518608147"
-                className="flex items-center gap-3 text-white hover:text-[#e31837] transition-colors"
-              >
-                <Phone className="w-5 h-5 text-[#e31837]" />
-                <span className="text-sm">+91 95186 08147</span>
-              </a>
-              <p className="text-gray-400 text-xs ml-8 mt-0.5">(WhatsApp Business Available!)</p>
-              <a
-                href="mailto:contactus@radiancetrucking.com"
-                className="flex items-center gap-3 text-white hover:text-[#e31837] transition-colors"
-              >
-                <Mail className="w-5 h-5 text-[#e31837]" />
-                <span className="text-sm">contactus@radiancetrucking.com</span>
-              </a>
-              <div className="flex items-center gap-3 text-white">
-                <MapPin className="w-5 h-5 text-[#e31837]" />
-                <span className="text-sm">Serving USA & Canada</span>
+            <div className="mt-10 space-y-5">
+              <div className="flex items-start gap-3 text-white">
+                <Phone className="mt-1 h-5 w-5 text-[#e31837]" />
+                <div>
+                  <p className="text-sm font-semibold">+91 95186 08147</p>
+                  <p className="text-xs text-slate-400">WhatsApp business support available</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 text-white">
+                <Mail className="mt-1 h-5 w-5 text-[#e31837]" />
+                <div>
+                  <p className="text-sm font-semibold">contactus@radiancetrucking.com</p>
+                  <p className="text-xs text-slate-400">Reach our operations team directly</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3 text-white">
+                <MapPin className="mt-1 h-5 w-5 text-[#e31837]" />
+                <div>
+                  <p className="text-sm font-semibold">USA & Canada</p>
+                  <p className="text-xs text-slate-400">Serving authorized carriers across major lanes</p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Form */}
-          <div id="get-started-today" className="bg-[#e31837] px-6 py-12 md:px-12 scroll-mt-24">
-            <h3 className="text-xl font-bold text-white mb-6">
-              GET STARTED TODAY
-            </h3>
+          <div id="get-started-today" className="rounded-[32px] bg-[#e31837] px-6 py-12 sm:px-10 lg:px-12 scroll-mt-24">
+            <h3 className="text-xl font-bold text-white mb-6">Start a conversation with RTS</h3>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <input
                   type="text"
                   name="fullName"
@@ -116,7 +108,7 @@ export function Contact() {
                   value={formData.fullName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded bg-white text-gray-800 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                  className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-sm text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white"
                 />
                 <input
                   type="tel"
@@ -125,11 +117,11 @@ export function Contact() {
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded bg-white text-gray-800 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                  className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-sm text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white"
                 />
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <input
                   type="email"
                   name="emailAddress"
@@ -137,18 +129,19 @@ export function Contact() {
                   value={formData.emailAddress}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded bg-white text-gray-800 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+                  className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-sm text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white"
                 />
                 <select
                   name="region"
                   value={formData.region}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded bg-white text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white"
+                  className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-white"
                 >
                   <option value="">Region</option>
-                  <option value="us">United States</option>
+                  <option value="us">USA</option>
                   <option value="canada">Canada</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
 
@@ -158,24 +151,20 @@ export function Contact() {
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full px-4 py-3 rounded bg-white text-gray-800 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white resize-none"
+                className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-sm text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white resize-none"
               />
 
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="w-full bg-[#0a1628] hover:bg-[#070f1a] disabled:opacity-70 disabled:cursor-not-allowed text-white py-3 rounded font-semibold text-sm transition-colors flex items-center justify-center gap-2"
+                className="w-full rounded-2xl bg-slate-950 px-4 py-3 text-sm font-semibold uppercase text-white transition hover:bg-slate-900 disabled:cursor-not-allowed disabled:opacity-70 flex items-center justify-center gap-2"
               >
-                {status === "sending" ? "Sending..." : "SEND MESSAGE"}
-                <Send className="w-4 h-4" />
+                {status === "sending" ? "Sending..." : "Send Message"}
+                <Send className="h-4 w-4" />
               </button>
 
               {statusMessage ? (
-                <p
-                  className={`text-sm mt-3 ${
-                    status === "success" ? "text-green-200" : "text-red-200"
-                  }`}
-                >
+                <p className={`text-sm mt-3 ${status === "success" ? "text-emerald-200" : "text-rose-200"}`}>
                   {statusMessage}
                 </p>
               ) : null}
