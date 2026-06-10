@@ -66,9 +66,9 @@ export function Contact() {
         <div className="grid gap-10 lg:grid-cols-2">
           <div className="rounded-[32px] bg-slate-950/95 px-6 py-14 shadow-[0_30px_80px_rgba(0,0,0,0.22)] sm:px-10 sm:py-16 lg:px-12">
             <p className="text-sm uppercase tracking-[0.32em] text-[#e31837] mb-4">Carrier Operations Inquiry</p>
-            <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl">Partner with RTS for better operational clarity.</h2>
+            <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl">Partner with RTS for stronger carrier operations.</h2>
             <p className="mt-6 max-w-xl text-sm leading-7 text-slate-300 sm:text-base">
-              We provide coordinated dispatch support, broker relations, and compliance operations for authorized carriers in North America.
+              We provide coordinated dispatch support, carrier-aligned broker relations, and compliance operations for authorized motorists across the USA and Canada.
             </p>
 
             <div className="mt-10 space-y-5">

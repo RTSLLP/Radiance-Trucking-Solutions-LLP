@@ -5,11 +5,11 @@ import Link from "next/link"
 import Image from "next/image"
 
 const benefits = [
-  "Coordinated dispatch execution focused on your operation.",
-  "Clear communication across brokers, dispatch, and drivers.",
-  "Compliance support that reduces administrative burden.",
-  "Operational confidence with carrier authority respected.",
-  "24/7 USA and Canada coverage for your fleet.",
+  "Dispatch execution matched to your lanes and equipment.",
+  "Concise communication among drivers, brokers, and operations.",
+  "Compliance workflows that support carrier readiness.",
+  "Dedicated support for authorized carriers in USA and Canada.",
+  "24/7 coordination across major North American lanes.",
 ]
 
 export function WhyChooseUs() {
@@ -20,7 +20,7 @@ export function WhyChooseUs() {
           <div className="space-y-6">
             <p className="text-sm uppercase tracking-[0.32em] text-[#e31837]">Why work with RTS</p>
             <h2 className="text-3xl md:text-4xl font-black tracking-tight text-slate-950">
-              Reliable carrier operations support built for your success.
+              Operational confidence for North American carriers.
             </h2>
             <div className="space-y-3">
               {benefits.map((benefit) => (

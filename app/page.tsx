@@ -22,7 +22,7 @@ export default function Home() {
                 Clear visibility for every dispatch
               </h2>
               <p className="mt-6 text-slate-300 text-base leading-relaxed">
-                Streamlined load details and driver communication designed to keep your attention on what matters: staying loaded, compliant, and moving safely.
+                Operational oversight and driver coordination that reduce administrative friction and keep your fleet moving with confidence.
               </p>
             </div>
 

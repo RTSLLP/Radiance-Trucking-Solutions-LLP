@@ -11,18 +11,16 @@ const detailedServices = [
       "Load confirmations aligned with carrier capabilities.",
       "Real-time adjustments to keep operations moving.",
     ],
-    image: "/assets/branding/cover-image.png",
   },
   {
     icon: TrendingUp,
     title: "Broker Relations",
     details: [
       "Strategic broker communication on behalf of the carrier.",
-      "Negotiation support centered on carrier authority.",
+      "Negotiation guidance built around carrier authority.",
       "Transparent terms and documented coordination.",
       "Ongoing management of broker expectations.",
     ],
-    image: "/assets/branding/cover-image.png",
   },
   {
     icon: ShieldCheck,
@@ -33,7 +31,6 @@ const detailedServices = [
       "Support for IFTA, DOT, and operational compliance.",
       "Back-office coordination that reduces administrative friction.",
     ],
-    image: "/assets/branding/cover-image.png",
   },
   {
     icon: Receipt,
@@ -44,7 +41,6 @@ const detailedServices = [
       "Alignment with carrier preferences and operational plans.",
       "Support for safe, compliant load execution.",
     ],
-    image: "/assets/branding/cover-image.png",
   },
 ]
 
@@ -64,9 +60,9 @@ export function DetailedServices() {
 
         <div className="space-y-20">
           {detailedServices.map((service, index) => (
-            <div 
-              key={index} 
-              id={["dispatch", "broker-relations", "compliance", "driver-support"][index]}
+            <div
+              key={index}
+              id={['dispatch', 'broker-relations', 'compliance', 'driver-support'][index]}
               className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-20 items-center scroll-mt-32`}
             >
               <div className="flex-1 space-y-6">
@@ -97,19 +93,16 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen">
       <section className="bg-slate-950 py-20 relative overflow-hidden text-white">
-        <div className="absolute inset-0 opacity-15">
-          <img
-            src="/assets/branding/cover-image.png"
-            alt="Service operations"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/95 to-slate-950" />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/95 via-slate-950/90 to-slate-950" />
+        <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 h-[420px] w-[420px] rounded-full bg-[#e31837]/10 blur-[120px]" />
+
         <div className="relative mx-auto max-w-7xl px-4">
           <div className="max-w-2xl">
             <p className="text-sm uppercase tracking-[0.32em] text-[#e31837] mb-3">Service portfolio</p>
-            <h1 className="text-4xl font-black tracking-tight sm:text-5xl leading-tight">Carrier operations services.</h1>
-            <p className="mt-6 text-base leading-8 text-slate-300 sm:text-lg">Dispatch coordination, broker relations, compliance support, and driver assistance.</p>
+            <h1 className="text-4xl font-black tracking-tight sm:text-5xl leading-tight">Carrier operations services for sustained performance.</h1>
+            <p className="mt-6 text-base leading-8 text-slate-300 sm:text-lg">
+              Dispatch coordination, broker relations, compliance support, and driver assistance built to reinforce your operation across USA and Canada.
+            </p>
           </div>
         </div>
       </section>
@@ -118,9 +111,7 @@ export default function ServicesPage() {
       <DetailedServices />
 
       <section className="py-24 bg-[#070f1a] text-white relative overflow-hidden">
-         {/* Subtle background glow */}
          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#e31837]/5 rounded-full blur-[120px] pointer-events-none" />
-         
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-3 gap-12 text-center">
             <div className="p-10 border border-white/5 bg-white/5 rounded-2xl hover:border-[#e31837]/30 transition-all group">

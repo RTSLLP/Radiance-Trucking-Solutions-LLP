@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import { usePathname } from "next/navigation"
@@ -12,7 +11,6 @@ const navLinks = [
   { name: "Services", href: "/services#dispatch" },
   { name: "About", href: "/about" },
   { name: "How We Work", href: "/how-we-work" },
-  { name: "Contact", href: "/contact" },
 ]
 
 export function Header() {
@@ -21,14 +19,14 @@ export function Header() {
   const isLinkActive = (href: string) => pathname === href.split("#")[0]
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl shadow-sm border-b border-slate-200/50">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl shadow-md border-b border-slate-200/50">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-[88px] md:h-[96px]">
+        <div className="flex items-center justify-between h-[84px] md:h-[92px]">
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Logo />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold tracking-[0.18em] uppercase">
+          <nav className="hidden lg:flex items-center gap-6 text-sm font-semibold tracking-[0.18em] uppercase">
             {navLinks.map((link) => {
               const isActive = isLinkActive(link.href)
               return (
@@ -66,8 +64,8 @@ export function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <nav className="lg:hidden mt-3 rounded-3xl border border-slate-200 bg-white/95 p-5 shadow-lg shadow-slate-900/5">
-            <div className="space-y-4">
+          <div className="lg:hidden mt-3 rounded-3xl border border-slate-200 bg-white/95 p-5 shadow-lg shadow-slate-900/5">
+            <nav className="space-y-4">
               {navLinks.map((link) => {
                 const isActive = isLinkActive(link.href)
                 return (
@@ -83,6 +81,8 @@ export function Header() {
                   </Link>
                 )
               })}
+            </nav>
+            <div className="mt-5">
               <Link
                 href="/contact"
                 className="block rounded-full bg-[#e31837] px-5 py-3 text-center text-sm font-semibold uppercase text-white transition hover:bg-[#c41430]"
@@ -91,7 +91,7 @@ export function Header() {
                 Contact RTS
               </Link>
             </div>
-          </nav>
+          </div>
         )}
       </div>
     </header>

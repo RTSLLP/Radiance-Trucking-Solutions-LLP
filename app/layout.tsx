@@ -11,13 +11,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title:
-    'Radiance Trucking Solutions LLP | Freight Brokerage, Truck Dispatch & Logistics Services USA & Canada',
+    'Radiance Trucking Solutions LLP | Dispatch Coordination & Carrier Operations Support USA & Canada',
 
   description:
-    'Radiance Trucking Solutions LLP provides professional freight brokerage, truck dispatch, carrier support, load planning, logistics coordination, and transportation management services across the United States and Canada. Trusted dispatch solutions for owner-operators, trucking fleets, carriers, brokers, and shippers seeking reliable freight movement and profitable loads.',
+    'RTS delivers premium dispatch coordination, carrier operations support, and logistics support services for authorized motor carriers across the USA and Canada. We help carriers maintain operational clarity, compliance readiness, and efficient load execution.',
 
   keywords:
-    'truck dispatch services USA, truck dispatch services Canada, freight brokerage company, freight broker USA, freight broker Canada, trucking dispatch company, owner operator dispatch services, dispatch services for trucking companies, logistics company USA, logistics company Canada, transportation company USA, transportation company Canada, freight dispatch company, trucking company dispatch, dry van dispatch services, reefer dispatch services, flatbed dispatch services, hotshot dispatch services, power only dispatch, carrier setup services, freight management services, logistics coordination, supply chain logistics, trucking logistics company, freight transportation solutions, trucking operations management, truck load booking, load planning services, trucking carrier support, owner operator support services, trucking fleet dispatch, dispatch company for owner operators, trucking solutions provider, load board management, freight scheduling, dedicated freight lanes, OTR trucking dispatch, trucking back office support, truck dispatcher USA, truck dispatcher Canada, freight forwarding support, transportation logistics solutions, logistics and dispatch company, trucking compliance support, freight movement solutions, carrier dispatch services, trucking industry services, Radiance Trucking Solutions LLP',
+    'dispatch coordination USA, dispatch coordination Canada, carrier operations support, logistics support services, truck dispatch services, carrier compliance support, logistics operations USA, logistics operations Canada, motor carrier support services, load planning support, carrier dispatch support, transportation operations support, carrier operational readiness, dispatch services for carriers, North America logistics support, fleet operations support, carrier authority support, trucking compliance services, proven dispatch coordination',
 
   authors: [{ name: 'Radiance Trucking Solutions LLP' }],
 
@@ -49,10 +49,10 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      'Radiance Trucking Solutions LLP | Freight Brokerage & Dispatch Services',
+      'Radiance Trucking Solutions LLP | Dispatch Coordination & Carrier Operations Support',
 
     description:
-      'Professional freight brokerage, dispatch, and logistics solutions across USA & Canada.',
+      'Premium dispatch coordination, carrier operations support, and logistics support services for authorized motor carriers across the USA and Canada.',
 
     url: 'https://www.radiancetrucking.com',
 

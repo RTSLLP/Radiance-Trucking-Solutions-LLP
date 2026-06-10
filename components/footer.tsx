@@ -20,12 +20,12 @@ const serviceLinks = [
 export function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-200">
-      <div className="max-w-7xl mx-auto px-4 py-14 sm:py-16">
+      <div className="max-w-7xl mx-auto px-4 py-16 lg:py-20">
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div className="space-y-6">
             <Logo variant="footer" />
             <p className="max-w-md text-sm leading-7 text-slate-400">
-              RTS provides premium dispatch coordination, carrier operations support, and compliance services for authorized motor carriers across North America.
+              RTS provides premium dispatch coordination, carrier operations support, and logistics readiness for authorized motor carriers across North America.
             </p>
           </div>
 
@@ -81,8 +81,8 @@ export function Footer() {
             © 2025 Radiance Trucking Solutions LLP (RTS). All Rights Reserved.
           </p>
           <div className="flex flex-col gap-2 text-xs text-slate-500 sm:flex-row sm:items-center sm:gap-6">
-            <p>RTS provides dispatch, administrative, and operational support services for authorized motor carriers.</p>
-            <p>All dispatch activities are performed under carrier authorization.</p>
+            <p>RTS supports authorized carriers with dispatch coordination and logistics operations across North America.</p>
+            <p>Dispatch and documentation support is delivered with carrier authority in mind.</p>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { CheckCircle, Users, Clock, FileText } from "lucide-react"
 
-const stats = [
+const stats: Array<{ icon: typeof CheckCircle; value: string; label: string; sublabel?: string }> = [
   {
     icon: CheckCircle,
     value: "Operational",
