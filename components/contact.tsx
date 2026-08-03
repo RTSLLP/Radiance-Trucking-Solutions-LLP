@@ -35,7 +35,7 @@ export function Contact() {
       }
 
       setStatus("success")
-      setStatusMessage("Your message has been sent successfully. We will contact you soon.")
+      setStatusMessage("Your message has been sent successfully. Our agent will contact you soon.")
       setFormData({
         fullName: "",
         phoneNumber: "",
@@ -86,7 +86,6 @@ export function Contact() {
                 <Phone className="w-5 h-5 text-[#e31837]" />
                 <span className="text-sm">+91 95186 08147</span>
               </a>
-              <p className="text-gray-400 text-xs ml-8 mt-0.5">(WhatsApp Business Available!)</p>
               <a
                 href="mailto:contactus@radiancetrucking.com"
                 className="flex items-center gap-3 text-white hover:text-[#e31837] transition-colors"
