@@ -75,7 +75,9 @@ export function Contact() {
               <div className="flex items-start gap-3 text-white">
                 <Phone className="mt-1 h-5 w-5 text-[#e31837]" />
                 <div>
-                  <p className="text-sm font-semibold">+91 95186 08147</p>
+                  <a href="tel:+15199376622" className="text-sm font-semibold hover:text-[#e31837] transition-colors">
+                    +1 519-937-6622
+                  </a>
                   <p className="text-xs text-slate-400">WhatsApp business support available</p>
                 </div>
               </div>

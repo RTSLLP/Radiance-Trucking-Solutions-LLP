@@ -10,6 +10,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.radiancetrucking.com'),
+
   title:
     'Radiance Trucking Solutions LLP | Dispatch Coordination & Carrier Operations Support USA & Canada',
 

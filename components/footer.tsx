@@ -58,9 +58,9 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-300 mb-4">Contact</h4>
             <div className="space-y-4 text-sm text-slate-400">
-              <a href="tel:+919518608147" className="flex items-center gap-3 transition hover:text-[#e31837]">
+              <a href="tel:+15199376622" className="flex items-center gap-3 transition hover:text-[#e31837]">
                 <Phone className="h-4 w-4 text-[#e31837]" />
-                +91 95186 08147
+                +1 519-937-6622
               </a>
               <a href="mailto:contactus@radiancetrucking.com" className="flex items-center gap-3 transition hover:text-[#e31837]">
                 <Mail className="h-4 w-4 text-[#e31837]" />

@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ClipboardCheck, Search, Headphones, FileText, Wallet, ShieldCheck, MapPin } from "lucide-react"
+import { ClipboardCheck, Search, Headphones, FileText, ShieldCheck } from "lucide-react"
 
 const steps = [
   {

@@ -30,9 +30,9 @@ export function TopBar() {
           ))}
         </div>
         <div className="flex items-center gap-6 text-xs">
-          <a href="tel:+919518608147" className="flex items-center gap-2 hover:text-[#e31837] transition-colors">
+          <a href="tel:+15199376622" className="flex items-center gap-2 hover:text-[#e31837] transition-colors">
             <Phone className="w-3 h-3" />
-            <span>+91 95186 08147</span>
+            <span>+1 519-937-6622</span>
           </a>
           <a href="/contact#get-started-today" className="flex items-center gap-2 hover:text-[#e31837] transition-colors">
             <Mail className="w-3 h-3" />

@@ -39,7 +39,9 @@ export default function ContactPage() {
                 <Phone className="h-5 w-5" />
               </div>
               <h4 className="mt-6 text-xl font-black text-slate-950 uppercase tracking-tight">Direct Line</h4>
-              <p className="mt-3 text-sm leading-7 text-slate-600">+91 95186 08147</p>
+              <a href="tel:+15199376622" className="mt-3 block text-sm leading-7 text-slate-600 hover:text-[#e31837] transition">
+                +1 519-937-6622
+              </a>
               <p className="mt-2 text-xs text-slate-400">WhatsApp business support available</p>
             </div>
             <div className="rounded-[28px] border border-slate-200 p-8 shadow-[0_20px_50px_rgba(15,23,42,0.06)]">
