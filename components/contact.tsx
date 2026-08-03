@@ -80,11 +80,11 @@ export function Contact() {
             {/* Contact Info */}
             <div className="space-y-4">
               <a
-                href="tel:+919518608147"
+                href="tel:+15199376622"
                 className="flex items-center gap-3 text-white hover:text-[#e31837] transition-colors"
               >
                 <Phone className="w-5 h-5 text-[#e31837]" />
-                <span className="text-sm">+91 95186 08147</span>
+                <span className="text-sm">+1 519-937-6622</span>
               </a>
               <a
                 href="mailto:contactus@radiancetrucking.com"

@@ -71,11 +71,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+919518608147"
+                  href="tel:+15199376622"
                   className="flex items-center gap-3 text-gray-400 hover:text-[#e31837] text-sm transition-colors"
                 >
                   <Phone className="w-4 h-4 text-[#e31837]" />
-                  +91 95186 08147
+                  +1 519-937-6622
                 </a>
               </li>
               <li>
@@ -86,9 +86,6 @@ export function Footer() {
                   <Mail className="w-4 h-4 text-[#e31837]" />
                   contactus@radiancetrucking.com
                 </a>
-              </li>
-              <li className="text-gray-400 text-xs">
-                (WhatsApp Business Available!)
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
                 <MapPin className="w-4 h-4 text-[#e31837]" />
