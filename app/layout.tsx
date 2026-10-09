@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.radiancetrucking.com'),
 
   title:
-    'Radiance Trucking Solutions LLP | Dispatch Coordination & Carrier Operations Support USA & Canada',
+    'Radiance Trucking Solutions LLP | Canadian Carrier Operations Support & Dispatch',
 
   description:
-    'RTS delivers premium dispatch coordination, carrier operations support, and logistics support services for authorized motor carriers across the USA and Canada. We help carriers maintain operational clarity, compliance readiness, and efficient load execution.',
+    'RTS delivers dedicated dispatch coordination, back-office management, and compliance operations support for commercial carriers across Canada. Zero forced dispatch, 100% carrier authority.',
 
   keywords:
-    'dispatch coordination USA, dispatch coordination Canada, carrier operations support, logistics support services, truck dispatch services, carrier compliance support, logistics operations USA, logistics operations Canada, motor carrier support services, load planning support, carrier dispatch support, transportation operations support, carrier operational readiness, dispatch services for carriers, North America logistics support, fleet operations support, carrier authority support, trucking compliance services, proven dispatch coordination',
+    'dispatch coordination Canada, Canadian carrier operations support, truck dispatch services Ontario, CVOR compliance support, Canadian fleet operations, load planning Canada, transportation operations support, Toronto Montreal corridor dispatch, 401 freight artery',
 
   authors: [{ name: 'Radiance Trucking Solutions LLP' }],
 
@@ -51,10 +51,10 @@ export const metadata: Metadata = {
 
   openGraph: {
     title:
-      'Radiance Trucking Solutions LLP | Dispatch Coordination & Carrier Operations Support',
+      'Radiance Trucking Solutions LLP | Canadian Carrier Operations Support',
 
     description:
-      'Premium dispatch coordination, carrier operations support, and logistics support services for authorized motor carriers across the USA and Canada.',
+      'Dedicated dispatch coordination, back-office management, and compliance operations support for commercial carriers across Canada.',
 
     url: 'https://www.radiancetrucking.com',
 

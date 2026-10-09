@@ -3,40 +3,46 @@
 import Link from "next/link"
 import { useState } from "react"
 import { usePathname } from "next/navigation"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ShieldCheck } from "lucide-react"
 import { Logo } from "./logo"
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Services", href: "/services#dispatch" },
-  { name: "About", href: "/about" },
-  { name: "How We Work", href: "/how-we-work" },
+  { name: "Solutions", href: "/services" },
+  { name: "Fleet Architecture", href: "/services#structures" },
+  { name: "Company", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ]
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
-  const isLinkActive = (href: string) => pathname === href.split("#")[0]
+
+  const isLinkActive = (href: string) => {
+    if (href === "/") return pathname === "/"
+    if (href.includes("#")) return false
+    return pathname.startsWith(href)
+  }
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl shadow-md border-b border-slate-200/50">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl shadow-sm border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-[84px] md:h-[92px]">
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Logo />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-6 text-sm font-semibold tracking-[0.18em] uppercase">
+          <nav className="hidden lg:flex items-center gap-7 text-xs font-bold tracking-wider uppercase">
             {navLinks.map((link) => {
               const isActive = isLinkActive(link.href)
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`transition ${
+                  className={`transition duration-150 ${
                     isActive
-                      ? "text-[#e31837]"
-                      : "text-slate-700 hover:text-[#e31837]"
+                      ? "text-[#FF1E2D] font-bold"
+                      : "text-[#0D183D] hover:text-[#FF1E2D]"
                   }`}
                 >
                   {link.name}
@@ -45,17 +51,24 @@ export function Header() {
             })}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
             <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-[#e31837] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#c41430]"
+              href="/portal"
+              className="inline-flex items-center gap-1.5 rounded-full border border-slate-300/80 bg-slate-50 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-[#0D183D] transition hover:bg-slate-100 hover:border-slate-400"
             >
-              Contact RTS
+              <ShieldCheck className="w-3.5 h-3.5 text-[#FF1E2D]" />
+              <span>Carrier Portal</span>
+            </Link>
+            <Link
+              href="/contact#get-a-dispatcher"
+              className="inline-flex items-center justify-center rounded-full bg-[#FF1E2D] px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-red-500/20 transition hover:bg-[#c41430] hover:shadow-lg"
+            >
+              Get a Dispatcher
             </Link>
           </div>
 
           <button
-            className="lg:hidden rounded-full border border-slate-200 p-2 text-slate-700 transition hover:border-slate-300"
+            className="lg:hidden rounded-xl border border-slate-200 p-2 text-slate-700 transition hover:bg-slate-50"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -64,7 +77,7 @@ export function Header() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-3 rounded-3xl border border-slate-200 bg-white/95 p-5 shadow-lg shadow-slate-900/5">
+          <div className="lg:hidden mt-2 mb-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-xl">
             <nav className="space-y-4">
               {navLinks.map((link) => {
                 const isActive = isLinkActive(link.href)
@@ -72,8 +85,8 @@ export function Header() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`block text-sm font-semibold uppercase tracking-[0.18em] transition ${
-                      isActive ? "text-[#e31837]" : "text-slate-800 hover:text-[#e31837]"
+                    className={`block text-sm font-semibold uppercase tracking-wider transition ${
+                      isActive ? "text-[#FF1E2D]" : "text-slate-800 hover:text-[#FF1E2D]"
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -82,13 +95,21 @@ export function Header() {
                 )
               })}
             </nav>
-            <div className="mt-5">
+            <div className="mt-6 pt-4 border-t border-slate-100 flex flex-col gap-3">
               <Link
-                href="/contact"
-                className="block rounded-full bg-[#e31837] px-5 py-3 text-center text-sm font-semibold uppercase text-white transition hover:bg-[#c41430]"
+                href="/portal"
+                className="flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-slate-50 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-[#0D183D] transition hover:bg-slate-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Contact RTS
+                <ShieldCheck className="w-4 h-4 text-[#FF1E2D]" />
+                <span>Carrier Portal</span>
+              </Link>
+              <Link
+                href="/contact#get-a-dispatcher"
+                className="block rounded-full bg-[#FF1E2D] px-5 py-3 text-center text-xs font-bold uppercase tracking-wider text-white transition hover:bg-[#c41430]"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Get a Dispatcher
               </Link>
             </div>
           </div>

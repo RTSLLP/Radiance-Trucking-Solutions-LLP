@@ -25,32 +25,30 @@ const stats: Array<{ icon: typeof CheckCircle; value: string; label: string; sub
 
 export function Stats() {
   return (
-    <section className="bg-[#0a1628] py-12">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Title */}
-        <h2 className="text-center text-white text-sm font-semibold tracking-wider mb-8">
-          TRUSTED BY OWNER-OPERATORS & FLEETS
+    <section className="bg-[#0D183D] py-14 border-y border-white/5">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        <h2 className="text-center text-slate-300 text-xs font-bold uppercase tracking-[0.25em] mb-10">
+          OPERATIONAL STANDARDS & CARRIER COMMITMENT
         </h2>
 
-        {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div
               key={stat.label}
               className={`flex items-center gap-4 ${
-                index < stats.length - 1 ? "md:border-r md:border-gray-700" : ""
-              } justify-center md:justify-start md:pl-8`}
+                index < stats.length - 1 ? "md:border-r md:border-white/10" : ""
+              } justify-center md:justify-start md:pl-6`}
             >
-              <stat.icon className="w-10 h-10 text-[#e31837] flex-shrink-0" />
+              <stat.icon className="w-9 h-9 text-[#FF1E2D] flex-shrink-0" strokeWidth={1.75} />
               <div>
                 {stat.value && (
-                  <p className="text-white text-2xl font-black">{stat.value}</p>
+                  <p className="text-white text-xl sm:text-2xl font-black tracking-tight">{stat.value}</p>
                 )}
-                <p className="text-gray-300 text-xs font-semibold tracking-wide">
+                <p className="text-slate-300 text-xs font-semibold tracking-wide">
                   {stat.label}
                 </p>
                 {stat.sublabel && (
-                  <p className="text-gray-300 text-xs font-semibold tracking-wide">
+                  <p className="text-slate-400 text-xs font-medium">
                     {stat.sublabel}
                   </p>
                 )}

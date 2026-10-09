@@ -1,48 +1,83 @@
 "use client"
 
-import { ArrowRight } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
+import { ArrowRight, ShieldCheck, CheckCircle2, PhoneCall } from "lucide-react"
+import { DispatchTerminal } from "./dispatch-terminal"
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-slate-950 text-white">
-      <div className="absolute inset-0">
-        <Image
-          src="/assets/branding/cover-image.png"
-          alt="North American transportation operations"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-950/92 via-slate-950/80 to-slate-950/92" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(227,24,55,0.14),transparent_30%)]" />
-      </div>
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#060B18] via-[#0D183D] to-[#060B18] text-white py-16 sm:py-20 lg:py-24">
+      {/* Background radial highlight */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-[#FF1E2D]/10 blur-[130px] rounded-full pointer-events-none" />
 
-      <div className="relative mx-auto max-w-7xl px-4 py-24 sm:py-32 lg:py-36">
-        <div className="max-w-2xl">
-          <p className="text-sm uppercase tracking-[0.3em] text-[#e31837] mb-4">Carrier Operations Support</p>
-          <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight">
-            Operational dispatch coordination for North American carriers
-          </h1>
-          <p className="mt-6 max-w-2xl text-base text-slate-200 sm:text-lg leading-8">
-            RTS delivers premium dispatch coordination, compliance-ready logistics support, and carrier-focused operations management across the USA and Canada.
-          </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          {/* Left Column: Messaging & CTAs */}
+          <div className="lg:col-span-7 space-y-7 text-center lg:text-left">
+            {/* Top pill */}
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#FF1E2D]/40 bg-[#FF1E2D]/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[#FF1E2D]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#FF1E2D] animate-ping" />
+              <span>Canadian Carrier Operations Support</span>
+            </div>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <Link
-              href="/contact#get-started-today"
-              className="inline-flex items-center justify-center rounded-full bg-[#e31837] px-8 py-3 text-sm font-semibold text-white transition hover:bg-[#c41430]"
-            >
-              Contact RTS
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-            <Link
-              href="/services"
-              className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-3 text-sm font-semibold text-white transition hover:border-[#e31837] hover:bg-white/15"
-            >
-              View Services
-            </Link>
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
+              The Operations Support Behind Your{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400">
+                Trucking Business.
+              </span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              Independent dispatch coordination, error-free back-office management, and proactive compliance administration—engineered to keep Canadian fleets rolling with{" "}
+              <strong className="text-white font-semibold">zero forced dispatch</strong>.
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+              <Link
+                href="/contact#get-a-dispatcher"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-[#FF1E2D] px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-red-500/25 transition hover:bg-[#c41430] hover:shadow-xl"
+              >
+                <span>Get a Dispatcher</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/services"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 bg-white/5 px-7 py-4 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-white/10 hover:border-slate-500"
+              >
+                <span>Explore Solutions</span>
+              </Link>
+              <Link
+                href="/portal"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-slate-700/80 bg-slate-900/60 px-6 py-4 text-sm font-bold uppercase tracking-wider text-slate-300 transition hover:text-white hover:bg-slate-800"
+              >
+                <ShieldCheck className="w-4 h-4 text-[#FF1E2D]" />
+                <span>Partner Portal</span>
+              </Link>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-xs text-slate-400">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-[#FF1E2D]" />
+                <span className="font-semibold text-slate-200">Zero Forced Dispatch</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-[#FF1E2D]" />
+                <span className="font-semibold text-slate-200">100% Retained Authority</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-[#FF1E2D]" />
+                <span className="font-semibold text-slate-200">Direct Kitchener Liaison Desk</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Dispatch Terminal */}
+          <div className="lg:col-span-5">
+            <DispatchTerminal />
           </div>
         </div>
       </div>

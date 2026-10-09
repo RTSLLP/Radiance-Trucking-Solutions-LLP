@@ -6,17 +6,17 @@ const MAILTRAP_SEND_URL = "https://send.api.mailtrap.io/api/send"
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { fullName, phoneNumber, emailAddress, region, message } = body
+    const { fullName, companyName, phoneNumber, emailAddress, truckCount, message } = body
 
-    if (!fullName || !phoneNumber || !emailAddress || !region || !message) {
+    if (!fullName || !phoneNumber || !emailAddress || !message) {
       return NextResponse.json(
-        { error: "All fields are required." },
+        { error: "Name, phone, email, and message are required." },
         { status: 400 }
       )
     }
 
     const apiToken = process.env.MAILTRAP_API_TOKEN
-    const emailTo = process.env.EMAIL_TO
+    const emailTo = process.env.EMAIL_TO || "contactus@radiancetrucking.com"
     const emailFrom = process.env.EMAIL_FROM || "contactus@radiancetrucking.com"
 
     if (!apiToken) {
@@ -26,22 +26,18 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    if (!emailTo) {
-      return NextResponse.json(
-        { error: "Recipient email not configured." },
-        { status: 500 }
-      )
-    }
-
     const html = `
-      <div style="font-family: Arial, sans-serif; color: #111; line-height: 1.5;">
-        <h2>New contact form submission</h2>
+      <div style="font-family: Arial, sans-serif; color: #111; line-height: 1.6; max-width: 600px;">
+        <h2 style="color: #0D183D; border-bottom: 2px solid #FF1E2D; padding-bottom: 8px;">New 'Get a Dispatcher' Inquiry</h2>
         <p><strong>Name:</strong> ${fullName}</p>
+        <p><strong>Company / Carrier:</strong> ${companyName || "N/A"}</p>
         <p><strong>Phone:</strong> ${phoneNumber}</p>
         <p><strong>Email:</strong> ${emailAddress}</p>
-        <p><strong>Region:</strong> ${region}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, "<br />")}</p>
+        <p><strong>Active Trucks:</strong> ${truckCount || "1"}</p>
+        <p><strong>Operational Details / Message:</strong></p>
+        <div style="background-color: #f4f6f8; padding: 12px; border-radius: 6px;">
+          ${message.replace(/\n/g, "<br />")}
+        </div>
       </div>
     `
 
@@ -52,10 +48,10 @@ export async function POST(req: NextRequest) {
         "Api-Token": apiToken,
       },
       body: JSON.stringify({
-        from: { email: emailFrom, name: "RTS Contact Form" },
+        from: { email: emailFrom, name: "RTS Dispatch Inquiry" },
         to: [{ email: emailTo }],
-        subject: `New contact request from ${fullName}`,
-        text: `Name: ${fullName}\nPhone: ${phoneNumber}\nEmail: ${emailAddress}\nRegion: ${region}\nMessage: ${message}`,
+        subject: `New Dispatch Inquiry: ${fullName} (${companyName || "Carrier"})`,
+        text: `Name: ${fullName}\nCompany: ${companyName}\nPhone: ${phoneNumber}\nEmail: ${emailAddress}\nTrucks: ${truckCount}\nMessage: ${message}`,
         html,
         reply_to: { email: emailAddress, name: fullName },
       }),

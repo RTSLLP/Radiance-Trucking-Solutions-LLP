@@ -6,9 +6,10 @@ import { useState } from "react"
 export function Contact() {
   const [formData, setFormData] = useState({
     fullName: "",
+    companyName: "",
     phoneNumber: "",
     emailAddress: "",
-    region: "",
+    truckCount: "1",
     message: "",
   })
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle")
@@ -35,12 +36,13 @@ export function Contact() {
       }
 
       setStatus("success")
-      setStatusMessage("Thank you for contacting RTS. Our team will review your inquiry and reach out within 1–2 business days.")
+      setStatusMessage("Thank you for reaching out to RTS. Our operations desk will review your details and connect with you shortly.")
       setFormData({
         fullName: "",
+        companyName: "",
         phoneNumber: "",
         emailAddress: "",
-        region: "",
+        truckCount: "1",
         message: "",
       })
     } catch (error) {
@@ -61,112 +63,169 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-[#0a1628] py-5">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid gap-10 lg:grid-cols-2">
-          <div className="rounded-[32px] bg-slate-950/95 px-6 py-14 shadow-[0_30px_80px_rgba(0,0,0,0.22)] sm:px-10 sm:py-16 lg:px-12">
-            <p className="text-sm uppercase tracking-[0.32em] text-[#e31837] mb-4">Carrier Operations Inquiry</p>
-            <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl">Partner with RTS for stronger carrier operations.</h2>
-            <p className="mt-6 max-w-xl text-sm leading-7 text-slate-300 sm:text-base">
-              We provide coordinated dispatch support, carrier-aligned broker relations, and compliance operations for authorized motorists across the USA and Canada.
+    <section id="contact" className="bg-[#0D183D] py-16 lg:py-24 border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="space-y-6">
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#FF1E2D]">
+              Direct Inquiry
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-white leading-tight">
+              Ready to streamline your fleet&apos;s daily operations?
+            </h2>
+            <p className="text-base leading-relaxed text-slate-300 max-w-xl">
+              Tell us about your equipment, preferred lanes, or operational bottlenecks. Our operations desk will review your requirements and discuss how RTS can support your business.
             </p>
 
-            <div className="mt-10 space-y-5">
-              <div className="flex items-start gap-3 text-white">
-                <Phone className="mt-1 h-5 w-5 text-[#e31837]" />
+            <div className="mt-8 pt-8 border-t border-white/10 space-y-5">
+              <div className="flex items-start gap-3.5 text-white">
+                <div className="p-2 rounded-xl bg-red-500/10 text-[#FF1E2D] mt-0.5">
+                  <Phone className="h-5 w-5" />
+                </div>
                 <div>
-                  <a href="tel:+15199376622" className="text-sm font-semibold hover:text-[#e31837] transition-colors">
-                    +1 519-937-6622
+                  <a href="tel:+15199376622" className="text-base font-bold hover:text-[#FF1E2D] transition-colors">
+                    +1 (519) 937-6622
                   </a>
-                  <p className="text-xs text-slate-400">WhatsApp business support available</p>
+                  <p className="text-xs text-slate-400 mt-0.5">Phone & WhatsApp Operations Line</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 text-white">
-                <Mail className="mt-1 h-5 w-5 text-[#e31837]" />
+
+              <div className="flex items-start gap-3.5 text-white">
+                <div className="p-2 rounded-xl bg-red-500/10 text-[#FF1E2D] mt-0.5">
+                  <Mail className="h-5 w-5" />
+                </div>
                 <div>
-                  <p className="text-sm font-semibold">contactus@radiancetrucking.com</p>
-                  <p className="text-xs text-slate-400">Reach our operations team directly</p>
+                  <a href="mailto:contactus@radiancetrucking.com" className="text-base font-bold hover:text-[#FF1E2D] transition-colors">
+                    contactus@radiancetrucking.com
+                  </a>
+                  <p className="text-xs text-slate-400 mt-0.5">Official Inquiries & Dispatch Desk</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 text-white">
-                <MapPin className="mt-1 h-5 w-5 text-[#e31837]" />
+
+              <div className="flex items-start gap-3.5 text-white">
+                <div className="p-2 rounded-xl bg-red-500/10 text-[#FF1E2D] mt-0.5">
+                  <MapPin className="h-5 w-5" />
+                </div>
                 <div>
-                  <p className="text-sm font-semibold">USA & Canada</p>
-                  <p className="text-xs text-slate-400">Serving authorized carriers across major lanes</p>
+                  <p className="text-base font-bold">Kitchener, Ontario, Canada</p>
+                  <p className="text-xs text-slate-400 mt-0.5">Serving Canadian Carriers across National & Regional Corridors</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div id="get-started-today" className="rounded-[32px] bg-[#e31837] px-6 py-12 sm:px-10 lg:px-12 scroll-mt-24">
-            <h3 className="text-xl font-bold text-white mb-6">Start a conversation with RTS</h3>
+          {/* Form */}
+          <div id="get-a-dispatcher" className="rounded-3xl bg-white p-7 sm:p-10 shadow-2xl scroll-mt-28">
+            <div className="mb-6">
+              <h3 className="text-2xl font-black text-[#0D183D]">Get a Dispatcher</h3>
+              <p className="text-xs text-slate-500 mt-1">Submit your details below and an RTS coordinator will follow up.</p>
+            </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <input
-                  type="text"
-                  name="fullName"
-                  placeholder="Full Name"
-                  value={formData.fullName}
-                  onChange={handleChange}
-                  required
-                  className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-sm text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white"
-                />
-                <input
-                  type="tel"
-                  name="phoneNumber"
-                  placeholder="Phone Number"
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  required
-                  className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-sm text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white"
-                />
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+                    Your Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="fullName"
+                    placeholder="e.g. John Doe"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FF1E2D]"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+                    Company / Carrier Name *
+                  </label>
+                  <input
+                    type="text"
+                    name="companyName"
+                    placeholder="e.g. Express Freight Ltd"
+                    value={formData.companyName}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FF1E2D]"
+                  />
+                </div>
               </div>
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <input
-                  type="email"
-                  name="emailAddress"
-                  placeholder="Email Address"
-                  value={formData.emailAddress}
-                  onChange={handleChange}
-                  required
-                  className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-sm text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white"
-                />
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+                    Phone Number *
+                  </label>
+                  <input
+                    type="tel"
+                    name="phoneNumber"
+                    placeholder="e.g. +1 (519) 000-0000"
+                    value={formData.phoneNumber}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FF1E2D]"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    name="emailAddress"
+                    placeholder="e.g. dispatch@yourcarrier.com"
+                    value={formData.emailAddress}
+                    onChange={handleChange}
+                    required
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FF1E2D]"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+                  Active Power Units / Trucks
+                </label>
                 <select
-                  name="region"
-                  value={formData.region}
+                  name="truckCount"
+                  value={formData.truckCount}
                   onChange={handleChange}
-                  required
-                  className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-white"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FF1E2D]"
                 >
-                  <option value="">Region</option>
-                  <option value="us">USA</option>
-                  <option value="canada">Canada</option>
-                  <option value="other">Other</option>
+                  <option value="1">1 Truck (Owner-Operator)</option>
+                  <option value="2-5">2 to 5 Trucks (Small Fleet)</option>
+                  <option value="6-15">6 to 15 Trucks (Growing Fleet)</option>
+                  <option value="16+">16+ Trucks (Commercial Fleet)</option>
                 </select>
               </div>
 
-              <textarea
-                name="message"
-                placeholder="Message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={4}
-                className="w-full rounded-2xl border border-white/20 bg-white px-4 py-3 text-sm text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white resize-none"
-              />
+              <div>
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+                  Tell Us About Your Operation / Lanes
+                </label>
+                <textarea
+                  name="message"
+                  placeholder="Equipment types (Dry Van, Reefer, Flatbed), primary lanes, or what backend support you need..."
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={3}
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#FF1E2D] resize-none"
+                />
+              </div>
 
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="w-full rounded-2xl bg-slate-950 px-4 py-3 text-sm font-semibold uppercase text-white transition hover:bg-slate-900 disabled:cursor-not-allowed disabled:opacity-70 flex items-center justify-center gap-2"
+                className="w-full rounded-full bg-[#FF1E2D] px-6 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-red-500/25 transition hover:bg-[#c41430] hover:shadow-xl disabled:cursor-not-allowed disabled:opacity-70 flex items-center justify-center gap-2"
               >
-                {status === "sending" ? "Sending..." : "Send Message"}
+                {status === "sending" ? "Submitting..." : "Get a Dispatcher"}
                 <Send className="h-4 w-4" />
               </button>
 
               {statusMessage ? (
-                <p className={`text-sm mt-3 ${status === "success" ? "text-emerald-200" : "text-rose-200"}`}>
+                <p className={`text-sm mt-3 font-medium ${status === "success" ? "text-emerald-600" : "text-rose-600"}`}>
                   {statusMessage}
                 </p>
               ) : null}
