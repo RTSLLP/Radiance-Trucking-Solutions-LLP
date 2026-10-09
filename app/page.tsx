@@ -1,34 +1,26 @@
-import { Hero } from "@/components/hero"
-import { TelemetryTicker } from "@/components/telemetry-ticker"
-import { FrictionPoints } from "@/components/friction-points"
-import { InteractiveSolutions } from "@/components/interactive-solutions"
-import { AutonomyBanner } from "@/components/autonomy-banner"
-import { FleetConfigurator } from "@/components/fleet-configurator"
-import { Contact } from "@/components/contact"
+import { EnterpriseHero } from "@/components/enterprise-hero"
+import { EnterpriseServices } from "@/components/enterprise-services"
+import { EnterpriseEquipment } from "@/components/enterprise-equipment"
+import { EnterpriseAutonomy } from "@/components/enterprise-autonomy"
+import { EnterpriseContact } from "@/components/enterprise-contact"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      {/* 1. Hero Canvas with Canadian Carrier positioning and Dispatch Command Center */}
-      <Hero />
+    <main className="min-h-screen bg-white">
+      {/* 1. Muscular Enterprise Hero & Proof Bar */}
+      <EnterpriseHero />
 
-      {/* 2. Live Corridor Telemetry Ticker */}
-      <TelemetryTicker />
+      {/* 2. Core Operational Capabilities & Services */}
+      <EnterpriseServices />
 
-      {/* 3. The 4 Road Friction Realities RTS Solves */}
-      <FrictionPoints />
+      {/* 3. Supported Equipment & Freight Profiles (53' Van, Reefer, Flatbed) */}
+      <EnterpriseEquipment />
 
-      {/* 4. Interactive 3-Tab Solutions Matrix (RTS Dispatch | RTS Operations | RTS Expansion) */}
-      <InteractiveSolutions />
+      {/* 4. Carrier Independence & Autonomy Standard (Zero Forced Dispatch) */}
+      <EnterpriseAutonomy />
 
-      {/* 5. Carrier Autonomy Standard: You own the truck. You call the shots. */}
-      <AutonomyBanner />
-
-      {/* 6. Interactive Fleet Scope Configurator ("Build Your Desk") */}
-      <FleetConfigurator />
-
-      {/* 7. Direct Desk Activation Inquiry Form & Canadian Operations Desk */}
-      <Contact />
+      {/* 5. Direct Kitchener Operations Desk & Inquiry Form */}
+      <EnterpriseContact />
     </main>
   )
 }
