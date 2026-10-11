@@ -84,7 +84,7 @@ export function Header() {
                   </div>
                   <div className="space-y-1">
                     {servicesDropdown.map((item) => {
-                      const Icon = item.icon
+                      const Icon = item.icon || Navigation
                       return (
                         <a
                           key={item.title}

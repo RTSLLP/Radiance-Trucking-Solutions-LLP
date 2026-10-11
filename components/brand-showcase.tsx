@@ -37,6 +37,7 @@ const capabilities = [
     id: "billing",
     title: "Invoicing & Factoring Liaison",
     tagline: "Accelerated cash flow and aggressive detention recovery.",
+    icon: Receipt,
     description:
       "Unpaid miles break carrier balance sheets. The moment your driver collects a signed Proof of Delivery (POD), our billing desk generates compliant invoices and routes them directly to your factoring company.",
     bullets: [
@@ -50,6 +51,7 @@ const capabilities = [
     id: "compliance",
     title: "Safety & Audit Readiness",
     tagline: "Protecting your commercial carrier authority.",
+    icon: ShieldCheck,
     description:
       "We help you maintain audit-ready documentation across Canadian commercial standards. From driver qualification records to inspection files, we ensure you stay fully road-legal.",
     bullets: [
@@ -111,7 +113,7 @@ export function BrandShowcase() {
           {/* Left Column: Interactive Nav Tabs */}
           <div className="lg:col-span-5 space-y-3">
             {capabilities.map((item) => {
-              const Icon = item.icon
+              const Icon = item.icon || Navigation
               const isActive = item.id === activeTab
               return (
                 <button
