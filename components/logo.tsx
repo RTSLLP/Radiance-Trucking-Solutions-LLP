@@ -1,25 +1,45 @@
 import Image from "next/image"
 
-export function Logo({ variant = "default" }: { variant?: "default" | "footer" }) {
-  if (variant === "footer") {
+interface LogoProps {
+  variant?: "navbar" | "master" | "horizontal"
+  className?: string
+}
+
+export function Logo({ variant = "navbar", className = "" }: LogoProps) {
+  if (variant === "master") {
     return (
       <Image
-        src="/assets/branding/RTS_HORIZONTAL_LOGO.png"
-        alt="Radiance Trucking Solutions LLP"
-        width={260}
-        height={70}
-        className="object-contain w-auto h-[56px]"
+        src="/assets/branding/RTS_MASTER_LOGO.png"
+        alt="Radiance Trucking Solutions LLP Master Logo"
+        width={320}
+        height={320}
+        className={`object-contain ${className}`}
+        priority
       />
     )
   }
 
+  if (variant === "horizontal") {
+    return (
+      <Image
+        src="/assets/branding/RTS_HORIZONTAL_LOGO.png"
+        alt="Radiance Trucking Solutions LLP"
+        width={280}
+        height={80}
+        className={`object-contain ${className}`}
+        priority
+      />
+    )
+  }
+
+  // Default navbar logo: crisp transparent 3D metallic RTS mark
   return (
     <Image
-      src="/assets/branding/RTS_NAVIGATION_LOGO.png"
-      alt="Radiance Trucking Solutions LLP"
-      width={280}
-      height={70}
-      className="object-contain h-[48px] md:h-[54px] w-auto"
+      src="/assets/branding/RTS_NAV_BAR_LOGO.png"
+      alt="RTS - Radiance Trucking Solutions LLP"
+      width={160}
+      height={48}
+      className={`object-contain h-10 md:h-12 w-auto ${className}`}
       priority
     />
   )

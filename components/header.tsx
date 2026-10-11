@@ -1,49 +1,133 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
-import { Menu, X, ShieldCheck, Phone } from "lucide-react"
+import { useState, useRef, useEffect } from "react"
+import { Menu, X, ShieldCheck, Phone, ChevronDown, Navigation, FileText, Receipt, Shield } from "lucide-react"
 import { Logo } from "./logo"
 
-const navLinks = [
-  { name: "Services", href: "#services" },
-  { name: "Equipment", href: "#equipment" },
-  { name: "Why RTS", href: "#why-rts" },
-  { name: "Contact", href: "#contact" },
+const servicesDropdown = [
+  {
+    title: "Dedicated Dispatch",
+    desc: "Targeted load sourcing & aggressive rate negotiations",
+    icon: Navigation,
+    href: "#services",
+  },
+  {
+    title: "Back-Office Administration",
+    desc: "Broker setup packets, COI submission & rate confirmations",
+    icon: FileText,
+    href: "#services",
+  },
+  {
+    title: "Billing & Factoring Liaison",
+    desc: "Same-day POD invoicing, detention & layover recovery",
+    icon: Receipt,
+    href: "#services",
+  },
+  {
+    title: "Safety & Compliance Support",
+    desc: "Canadian CVOR & NSC audit readiness documentation",
+    icon: Shield,
+    href: "#services",
+  },
 ]
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setServicesOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [])
 
   return (
-    <header className="sticky top-0 z-50 bg-[#0a1628] text-white border-b border-slate-800 shadow-md">
+    <header className="sticky top-0 z-50 bg-[#0a1628]/95 backdrop-blur-md text-white border-b border-slate-800 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 md:h-24">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0">
-            <div className="bg-white/95 rounded-lg px-3 py-1.5 shadow-sm border border-white/20">
-              <Logo />
-            </div>
+        <div className="flex items-center justify-between h-20 md:h-22">
+          {/* Logo - Transparent, high-res 3D mark directly on dark header */}
+          <Link href="/" className="flex items-center gap-3 flex-shrink-0 transition-opacity hover:opacity-90">
+            <Logo variant="navbar" />
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation with Dropdown */}
           <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold tracking-wide">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-slate-300 hover:text-white transition-colors py-2"
+            {/* Services Dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                type="button"
+                onClick={() => setServicesOpen(!servicesOpen)}
+                onMouseEnter={() => setServicesOpen(true)}
+                className={`inline-flex items-center gap-1.5 py-2 transition-colors ${
+                  servicesOpen ? "text-white" : "text-slate-300 hover:text-white"
+                }`}
+                aria-expanded={servicesOpen}
               >
-                {link.name}
-              </a>
-            ))}
+                <span>Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? "rotate-180 text-red-500" : ""}`} />
+              </button>
+
+              {servicesOpen && (
+                <div
+                  onMouseLeave={() => setServicesOpen(false)}
+                  className="absolute left-0 mt-2 w-80 rounded-xl bg-[#0c1b33] border border-slate-800 shadow-2xl p-2.5 z-50 backdrop-blur-xl animate-in fade-in slide-in-from-top-2 duration-150"
+                >
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-3 py-1.5">
+                    Operational Capabilities
+                  </div>
+                  <div className="space-y-1">
+                    {servicesDropdown.map((item) => {
+                      const Icon = item.icon
+                      return (
+                        <a
+                          key={item.title}
+                          href={item.href}
+                          onClick={() => setServicesOpen(false)}
+                          className="flex items-start gap-3 p-2.5 rounded-lg hover:bg-slate-800/80 transition-colors group"
+                        >
+                          <div className="w-8 h-8 rounded-md bg-red-500/10 text-red-400 group-hover:bg-red-500 group-hover:text-white flex items-center justify-center flex-shrink-0 transition-colors mt-0.5">
+                            <Icon className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-sm font-bold text-white group-hover:text-red-400 transition-colors">
+                              {item.title}
+                            </div>
+                            <div className="text-xs text-slate-400 leading-snug mt-0.5">
+                              {item.desc}
+                            </div>
+                          </div>
+                        </a>
+                      )
+                    })}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <a href="#why-rts" className="text-slate-300 hover:text-white transition-colors py-2">
+              Why RTS
+            </a>
+            <a href="#about" className="text-slate-300 hover:text-white transition-colors py-2">
+              About
+            </a>
+            <a href="#contact" className="text-slate-300 hover:text-white transition-colors py-2">
+              Contact
+            </a>
           </nav>
 
           {/* Right Action Desk */}
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="tel:15199376622"
-              className="flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white transition mr-2"
+              className="flex items-center gap-2 text-xs font-bold text-slate-300 hover:text-white transition"
+              title="Direct Operations Line"
             >
               <Phone className="w-3.5 h-3.5 text-red-500" />
               <span>+1 (519) 937-6622</span>
@@ -51,17 +135,17 @@ export function Header() {
 
             <Link
               href="/portal"
-              className="inline-flex items-center gap-2 rounded-lg border border-slate-700 bg-slate-900/80 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-200 transition hover:bg-slate-800 hover:text-white"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-900/90 px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-slate-200 transition hover:bg-slate-800 hover:text-white hover:border-slate-600"
             >
-              <ShieldCheck className="w-4 h-4 text-red-500" />
+              <ShieldCheck className="w-3.5 h-3.5 text-red-500" />
               <span>Carrier Portal</span>
             </Link>
 
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-lg bg-[#e31837] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-red-600/20 transition hover:bg-[#c41430]"
+              className="inline-flex items-center justify-center rounded-lg bg-[#e31837] hover:bg-[#c41430] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-md shadow-red-600/25 transition-all hover:shadow-red-600/40"
             >
-              Request a Dispatcher
+              Get Started
             </a>
           </div>
 
@@ -75,34 +159,61 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Dropdown */}
+        {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-slate-800 bg-[#070f1a] py-6 px-4 space-y-4">
+          <div className="lg:hidden border-t border-slate-800 bg-[#081222] py-5 px-4 space-y-4 animate-in fade-in duration-150">
             <nav className="flex flex-col space-y-3">
-              {navLinks.map((link) => (
+              <div className="text-xs font-bold uppercase tracking-wider text-red-500 pt-1">
+                Services
+              </div>
+              {servicesDropdown.map((s) => (
                 <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-base font-medium text-slate-300 hover:text-white transition py-1"
+                  key={s.title}
+                  href={s.href}
+                  className="text-sm font-medium text-slate-300 hover:text-white pl-3 py-1 border-l border-slate-800 hover:border-red-500 transition"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {link.name}
+                  {s.title}
                 </a>
               ))}
+
+              <div className="pt-2 border-t border-slate-800 space-y-2">
+                <a
+                  href="#why-rts"
+                  className="block text-sm font-semibold text-slate-300 hover:text-white py-1"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Why RTS
+                </a>
+                <a
+                  href="#about"
+                  className="block text-sm font-semibold text-slate-300 hover:text-white py-1"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  About RTS
+                </a>
+                <a
+                  href="#contact"
+                  className="block text-sm font-semibold text-slate-300 hover:text-white py-1"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Contact Desk
+                </a>
+              </div>
             </nav>
 
-            <div className="pt-4 border-t border-slate-800 flex flex-col gap-3">
+            <div className="pt-4 border-t border-slate-800 flex flex-col gap-2.5">
               <a
                 href="tel:15199376622"
                 className="flex items-center gap-2 text-sm font-semibold text-slate-300 py-1"
               >
                 <Phone className="w-4 h-4 text-red-500" />
-                <span>+1 (519) 937-6622 (24/7 Desk)</span>
+                <span>+1 (519) 937-6622 (Operations Line)</span>
               </a>
 
               <Link
                 href="/portal"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-800 py-3 text-xs font-bold uppercase tracking-wider text-white"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-800 py-2.5 text-xs font-bold uppercase tracking-wider text-white"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <ShieldCheck className="w-4 h-4 text-red-500" />
@@ -111,10 +222,10 @@ export function Header() {
 
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-lg bg-[#e31837] py-3 text-xs font-bold uppercase tracking-wider text-white"
+                className="inline-flex items-center justify-center rounded-lg bg-[#e31837] py-2.5 text-xs font-bold uppercase tracking-wider text-white"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Request a Dispatcher
+                Get Started
               </a>
             </div>
           </div>

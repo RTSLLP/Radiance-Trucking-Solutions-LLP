@@ -1,25 +1,21 @@
 import { EnterpriseHero } from "@/components/enterprise-hero"
-import { EnterpriseServices } from "@/components/enterprise-services"
-import { EnterpriseEquipment } from "@/components/enterprise-equipment"
+import { BrandShowcase } from "@/components/brand-showcase"
 import { EnterpriseAutonomy } from "@/components/enterprise-autonomy"
 import { EnterpriseContact } from "@/components/enterprise-contact"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-      {/* 1. Muscular Enterprise Hero & Proof Bar */}
+      {/* 1. Official Hero Graphic Canvas featuring "YOUR PARTNER BEHIND EVERY MILE" */}
       <EnterpriseHero />
 
-      {/* 2. Core Operational Capabilities & Services */}
-      <EnterpriseServices />
+      {/* 2. Interactive Modern Operations Architecture (Apple/Antigravity style with Master Logo) */}
+      <BrandShowcase />
 
-      {/* 3. Supported Equipment & Freight Profiles (53' Van, Reefer, Flatbed) */}
-      <EnterpriseEquipment />
-
-      {/* 4. Carrier Independence & Autonomy Standard (Zero Forced Dispatch) */}
+      {/* 3. The Carrier Independence Standard: You Own The Equipment. You Call The Shots. */}
       <EnterpriseAutonomy />
 
-      {/* 5. Direct Kitchener Operations Desk & Inquiry Form */}
+      {/* 4. Universal Operations Contact Desk & Direct Liaison */}
       <EnterpriseContact />
     </main>
   )
