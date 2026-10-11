@@ -10,19 +10,19 @@ export function Footer() {
           {/* Brand & Master Logo Column */}
           <div className="lg:col-span-5 space-y-5">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 relative flex-shrink-0">
+              <div className="w-20 h-14 sm:w-24 sm:h-16 relative flex-shrink-0">
                 <Image
-                  src="/assets/branding/RTS_MASTER_LOGO.png"
-                  alt="Radiance Trucking Solutions LLP Master Emblem"
+                  src="/assets/branding/rts-emblem-transparent.png"
+                  alt="Radiance Trucking Solutions LLP Logistics Emblem"
                   fill
                   className="object-contain"
                 />
               </div>
               <div>
-                <div className="text-base font-black text-white tracking-wide">
+                <div className="text-base sm:text-lg font-black text-white tracking-wide">
                   RADIANCE TRUCKING SOLUTIONS LLP
                 </div>
-                <div className="text-xs font-bold text-red-500 uppercase tracking-widest mt-0.5">
+                <div className="text-xs font-bold text-[#e31837] uppercase tracking-widest mt-0.5">
                   YOUR PARTNER BEHIND EVERY MILE
                 </div>
               </div>

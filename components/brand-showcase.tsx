@@ -84,21 +84,21 @@ export function BrandShowcase() {
             </p>
           </div>
 
-          {/* Master Emblem Card */}
-          <div className="flex-shrink-0 flex items-center gap-4 bg-slate-50 border border-slate-200/80 rounded-2xl p-4 shadow-sm">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 relative flex-shrink-0">
+          {/* Official Operations Hub Card */}
+          <div className="flex-shrink-0 flex items-center gap-4 bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 shadow-sm">
+            <div className="w-20 h-16 sm:w-24 sm:h-18 relative flex-shrink-0">
               <Image
-                src="/assets/branding/RTS_MASTER_LOGO.png"
-                alt="RTS Official Master Emblem"
+                src="/assets/branding/rts-emblem-transparent.png"
+                alt="RTS Official Logistics Emblem"
                 fill
                 className="object-contain"
               />
             </div>
-            <div className="pr-4">
-              <div className="text-xs font-black uppercase text-slate-900 tracking-wide">
+            <div className="pr-2">
+              <div className="text-xs sm:text-sm font-black uppercase text-slate-900 tracking-wide">
                 Radiance Trucking Solutions LLP
               </div>
-              <div className="text-[11px] font-semibold text-red-600 uppercase tracking-wider mt-0.5">
+              <div className="text-[11px] font-bold text-[#e31837] uppercase tracking-wider mt-0.5">
                 Official Operations Hub
               </div>
               <div className="text-xs text-slate-500 mt-1">
