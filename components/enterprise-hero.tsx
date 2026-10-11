@@ -71,20 +71,20 @@ export function EnterpriseHero() {
             </div>
           </div>
 
-          {/* Clean Primary Actions */}
+          {/* Clean Primary Actions (TransAm Style) */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-            <Link
-              href="#contact"
+            <a
+              href="#quote"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-[#e31837] hover:bg-[#c41430] text-white font-bold text-sm uppercase tracking-wider transition-all shadow-lg shadow-red-600/30 hover:shadow-red-600/50"
             >
-              <span>Contact RTS</span>
+              <span>Request Dispatch Rate</span>
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
             <a
-              href="#services"
+              href="#equipment"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-white font-semibold text-sm tracking-wider border border-slate-700 transition backdrop-blur-sm"
             >
-              <span>Our Services</span>
+              <span>Equipment & Lanes</span>
               <ArrowRight className="w-4 h-4 text-slate-400" />
             </a>
           </div>

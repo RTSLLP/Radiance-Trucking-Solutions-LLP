@@ -49,7 +49,53 @@ export function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md text-slate-800 border-b border-slate-200 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white text-slate-800 border-b border-slate-200 shadow-sm">
+      {/* 1. TransAm & Pride Style Enterprise Utility Top Bar */}
+      <div className="bg-[#070f1a] text-slate-300 text-xs border-b border-slate-800/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
+          <div className="flex items-center gap-3 sm:gap-4 text-[11px] font-medium text-slate-300">
+            <span className="flex items-center gap-1.5 text-slate-300">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-sm shadow-emerald-400/50" />
+              <strong className="text-white font-semibold">Active 24/7 Operations Desk</strong>
+            </span>
+            <span className="hidden md:inline text-slate-700">•</span>
+            <span className="hidden md:inline text-slate-400">
+              Kitchener, ON Operations Liaison
+            </span>
+            <span className="hidden lg:inline text-slate-700">•</span>
+            <span className="hidden lg:inline text-slate-400">
+              Highway 401 & Cross-Border Corridors
+            </span>
+          </div>
+
+          <div className="flex items-center gap-4 sm:gap-5 text-[11px] font-semibold">
+            <a
+              href="tel:15199376622"
+              className="flex items-center gap-1.5 text-white hover:text-red-400 transition"
+              title="Direct Operations Line"
+            >
+              <Phone className="w-3 h-3 text-red-500" />
+              <span>+1 (519) 937-6622</span>
+            </a>
+            <span className="hidden sm:inline text-slate-700">|</span>
+            <a
+              href="#quote"
+              className="hidden sm:inline text-slate-300 hover:text-white transition"
+            >
+              Rate Inquiries
+            </a>
+            <span className="hidden sm:inline text-slate-700">|</span>
+            <Link
+              href="/portal"
+              className="text-red-400 hover:text-red-300 flex items-center gap-1 transition"
+            >
+              <ShieldCheck className="w-3 h-3" />
+              <span>Carrier Portal</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 md:h-22">
           {/* Logo - Transparent, high-res 3D RTS mark on clean white navbar */}
@@ -111,11 +157,14 @@ export function Header() {
               )}
             </div>
 
+            <a href="#equipment" className="text-slate-700 hover:text-[#e31837] transition-colors py-2">
+              Equipment & Lanes
+            </a>
             <a href="#why-rts" className="text-slate-700 hover:text-[#e31837] transition-colors py-2">
               Why RTS
             </a>
-            <a href="#about" className="text-slate-700 hover:text-[#e31837] transition-colors py-2">
-              About
+            <a href="#quote" className="text-slate-700 hover:text-[#e31837] transition-colors py-2">
+              Rate Desk
             </a>
             <a href="#contact" className="text-slate-700 hover:text-[#e31837] transition-colors py-2">
               Contact
@@ -179,6 +228,13 @@ export function Header() {
 
               <div className="pt-2 border-t border-slate-200 space-y-2">
                 <a
+                  href="#equipment"
+                  className="block text-sm font-semibold text-slate-700 hover:text-[#e31837] py-1"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Equipment & Lanes
+                </a>
+                <a
                   href="#why-rts"
                   className="block text-sm font-semibold text-slate-700 hover:text-[#e31837] py-1"
                   onClick={() => setMobileMenuOpen(false)}
@@ -186,11 +242,11 @@ export function Header() {
                   Why RTS
                 </a>
                 <a
-                  href="#about"
+                  href="#quote"
                   className="block text-sm font-semibold text-slate-700 hover:text-[#e31837] py-1"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  About RTS
+                  Rate Desk (Quick Quote)
                 </a>
                 <a
                   href="#contact"

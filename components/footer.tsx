@@ -66,23 +66,28 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition">
-                  Rate Negotiation & Load Hunting
+                <a href="#equipment" className="hover:text-white transition">
+                  53ft Dry Vans & Reefers
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition">
-                  Broker Packet Administration
+                <a href="#equipment" className="hover:text-white transition">
+                  Highway 401 & Cross-Border Corridors
+                </a>
+              </li>
+              <li>
+                <a href="#quote" className="hover:text-white transition">
+                  Instant Rate & Dispatch Inquiries
+                </a>
+              </li>
+              <li>
+                <a href="#why-rts" className="hover:text-white transition">
+                  Zero Forced Dispatch Standard
                 </a>
               </li>
               <li>
                 <a href="#services" className="hover:text-white transition">
                   Invoicing & Factoring Liaison
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-white transition">
-                  Safety & Audit Readiness
                 </a>
               </li>
             </ul>
