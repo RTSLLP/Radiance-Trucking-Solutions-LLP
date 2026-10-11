@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ShieldCheck, FileText, UserPlus, CreditCard, ArrowRight, Clock, CheckCircle2, Phone, Mail } from "lucide-react"
+import { ShieldCheck, FileText, UserPlus, CreditCard, ArrowRight, Clock, Check, Phone, Mail } from "lucide-react"
 
 export default function PortalHubPage() {
   return (
@@ -42,15 +42,15 @@ export default function PortalHubPage() {
               </p>
               <ul className="space-y-2.5 text-xs text-slate-700 font-medium mb-6">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                   <span>Fleet &amp; Equipment Profiling</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                   <span>COI &amp; Safety Certificate Upload</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                   <span>Direct Operations Desk Assignment</span>
                 </li>
               </ul>
@@ -81,15 +81,15 @@ export default function PortalHubPage() {
               </p>
               <ul className="space-y-2.5 text-xs text-slate-700 font-medium mb-6">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                   <span>Server-Validated Timestamp (UTC &amp; EST)</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                   <span>IP Address &amp; Signer Fingerprinting</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                   <span>Instant Certificate of Execution PDF</span>
                 </li>
               </ul>
@@ -120,15 +120,15 @@ export default function PortalHubPage() {
               </p>
               <ul className="space-y-2.5 text-xs text-slate-700 font-medium mb-6">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                   <span>Carrier vs. RTS Profile Spec</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                   <span>Dynamic Overdue Penalty Calculator</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                   <span>Encrypted B2B Bank Transfer Rails</span>
                 </li>
               </ul>

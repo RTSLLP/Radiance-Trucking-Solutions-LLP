@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Phone, Mail, MapPin, ShieldCheck, Award, CheckCircle } from "lucide-react"
+import { Phone, Mail, MapPin, ShieldCheck, Award, Check } from "lucide-react"
 
 export function Footer() {
   return (
@@ -127,19 +127,19 @@ export function Footer() {
               </div>
               <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-400">
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-3 h-3 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-3 h-3 text-emerald-500 flex-shrink-0" />
                   <span>IEC Registered</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-3 h-3 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-3 h-3 text-emerald-500 flex-shrink-0" />
                   <span>24/7 Live Desk</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-3 h-3 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-3 h-3 text-emerald-500 flex-shrink-0" />
                   <span>100% Rate Con Proof</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle className="w-3 h-3 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-3 h-3 text-emerald-500 flex-shrink-0" />
                   <span>Zero Forced Dispatch</span>
                 </div>
               </div>

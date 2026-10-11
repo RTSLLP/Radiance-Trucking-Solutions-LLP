@@ -6,7 +6,7 @@ import {
   UserPlus,
   Truck,
   FileCheck2,
-  CheckCircle2,
+  Check,
   ArrowRight,
   ArrowLeft,
   AlertCircle,
@@ -146,7 +146,7 @@ export default function CarrierOnboardingPage() {
           /* Success Screen */
           <div className="rounded-3xl border border-emerald-500/30 bg-white p-8 sm:p-12 shadow-xl text-center space-y-6">
             <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
-              <CheckCircle2 className="w-8 h-8" />
+              <Check className="w-8 h-8" />
             </div>
             <h2 className="text-3xl font-black text-[#0D183D]">
               Onboarding Packet Received

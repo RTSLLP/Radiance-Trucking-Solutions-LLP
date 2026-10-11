@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import {
   CreditCard,
-  CheckCircle2,
+  Check,
   AlertTriangle,
   Clock,
   ArrowLeft,
@@ -144,19 +144,19 @@ export default function CarrierAccountPage() {
               </span>
               <ul className="space-y-2 text-xs text-slate-700">
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                   <span>Dedicated Trip Coordination &amp; Spot Rate Negotiation</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                   <span>24/7 Driver Check-Calls &amp; Appointment Scheduling</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                   <span>Immediate POD Archiving &amp; Broker Invoicing Preparation</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                  <Check className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                   <span>Factoring Notice-of-Assignment (NOA) Reconciliations</span>
                 </li>
               </ul>
@@ -236,7 +236,7 @@ export default function CarrierAccountPage() {
                       <td className="py-4">
                         {inv.status === "paid" ? (
                           <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-bold text-emerald-700">
-                            <CheckCircle2 className="w-3.5 h-3.5" />
+                            <Check className="w-3.5 h-3.5" />
                             <span>Paid</span>
                           </span>
                         ) : penaltyInfo.isOverdue ? (

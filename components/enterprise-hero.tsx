@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, ShieldCheck, CheckCircle2, TrendingUp, Truck, Globe } from "lucide-react"
+import { ArrowRight, ShieldCheck, TrendingUp, Truck, Globe } from "lucide-react"
 
 export function EnterpriseHero() {
   return (

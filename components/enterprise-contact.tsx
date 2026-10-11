@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Phone, Mail, MapPin, Send, CheckCircle2 } from "lucide-react"
+import { Phone, Mail, MapPin, Send, Check } from "lucide-react"
 
 export function EnterpriseContact() {
   const [formData, setFormData] = useState({
@@ -114,7 +114,7 @@ export function EnterpriseContact() {
             {submitted ? (
               <div className="py-12 text-center">
                 <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle2 className="w-10 h-10" />
+                  <Check className="w-10 h-10" />
                 </div>
                 <h3 className="text-2xl font-black text-slate-900 mb-2">Inquiry Successfully Received</h3>
                 <p className="text-slate-600 max-w-md mx-auto mb-6">

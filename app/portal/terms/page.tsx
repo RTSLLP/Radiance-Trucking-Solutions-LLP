@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { ShieldCheck, FileText, CheckCircle2, AlertCircle, ArrowLeft, Clock, Lock, Send } from "lucide-react"
+import { ShieldCheck, FileText, Check, AlertCircle, ArrowLeft, Clock, Lock, Send } from "lucide-react"
 
 export default function TermsExecutionPage() {
   const [currentTime, setCurrentTime] = useState("")
@@ -122,7 +122,7 @@ export default function TermsExecutionPage() {
           /* Success Screen */
           <div className="rounded-3xl border border-emerald-500/30 bg-white p-8 sm:p-12 shadow-xl text-center space-y-6">
             <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
-              <CheckCircle2 className="w-8 h-8" />
+              <Check className="w-8 h-8" />
             </div>
             <h2 className="text-3xl font-black text-[#0D183D]">
               Agreement Executed Successfully
