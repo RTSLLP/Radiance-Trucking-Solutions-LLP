@@ -1,92 +1,108 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, ShieldCheck, TrendingUp, Truck, Globe } from "lucide-react"
+import { ArrowRight, Phone, Headphones, ClipboardCheck, Globe2, Handshake } from "lucide-react"
 
 export function EnterpriseHero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-[#070f1a] text-white overflow-hidden">
-      {/* Official Hero Background Asset with Subtle Dark Corporate Gradient */}
+    <section className="relative min-h-[85vh] lg:min-h-[92vh] flex items-center bg-white text-slate-900 overflow-hidden border-b border-slate-200">
+      {/* Official Hero Background Graphic - Full brightness without dark gloom */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/assets/branding/hero-official.png"
           alt="Radiance Trucking Solutions Official Logistics Fleet"
           fill
           priority
-          className="object-cover object-right md:object-center opacity-35 lg:opacity-40"
+          className="object-cover object-right md:object-right opacity-95 lg:opacity-100"
         />
-        {/* Cinematic gradient overlays to ensure text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070f1a] via-[#070f1a]/85 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#070f1a] via-transparent to-[#070f1a]/40" />
+        {/* Soft, bright enterprise gradient overlay: leaves the right-side fleet & globe in full daylight brilliance while ensuring crystal-clear text readability on the left */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 sm:via-white/90 md:via-white/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent md:hidden" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 w-full">
         <div className="max-w-2xl lg:max-w-3xl">
-          {/* Active Status Beacon (User's favorite blinking red light feature) */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-red-500/30 bg-red-500/10 text-red-400 text-xs font-bold tracking-wider uppercase mb-6 backdrop-blur-md">
-            <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse shadow-sm shadow-red-500" />
-            <span>Active 24/7 Operations & Dispatch Desk</span>
+          {/* Active Status Beacon (Red pulsing light) */}
+          <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-red-200 bg-red-50/90 text-red-700 text-xs font-black tracking-wider uppercase mb-5 backdrop-blur-sm shadow-sm">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#e31837] animate-pulse shadow-sm shadow-red-500" />
+            <span>Active 24/7 Operations &amp; Dispatch Desk</span>
           </div>
 
-          {/* Official Core Tagline Headline */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.05] mb-4">
-            YOUR PARTNER BEHIND{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-red-400 to-red-500">
-              EVERY MILE.
+          {/* Official Company Packet Brand Slogan Divider Bar */}
+          <div className="flex items-center gap-3 mb-4">
+            <div className="h-0.5 w-8 sm:w-12 bg-[#e31837] rounded-full" />
+            <span className="text-xs sm:text-sm font-black tracking-widest uppercase text-slate-900">
+              YOUR PARTNER BEHIND EVERY MILE.
+            </span>
+            <div className="h-0.5 w-8 sm:w-12 bg-slate-900 rounded-full" />
+          </div>
+
+          {/* Official Major Impact Headline from Company Packet Page 1 */}
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-slate-950 leading-[1.05] mb-5">
+            SIMPLIFY OPERATIONS.<br />
+            <span className="text-[#e31837]">
+              FOCUS ON WHAT MOVES YOU FORWARD.
             </span>
           </h1>
 
-          {/* Official Brand Subtitle */}
-          <div className="flex items-center gap-3 text-xs sm:text-sm font-bold tracking-widest uppercase text-slate-300 mb-6">
-            <span>FAST</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-            <span>RELIABLE</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-            <span>NATIONWIDE</span>
+          {/* Company Packet Bullet Category Tags */}
+          <div className="flex flex-wrap items-center gap-x-3 sm:gap-x-4 gap-y-2 text-xs sm:text-sm font-black tracking-wider uppercase text-slate-800 mb-5">
+            <span className="flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-[#e31837]" />
+              DISPATCH
+            </span>
+            <span className="text-slate-300">•</span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-[#e31837]" />
+              CARRIER SUPPORT
+            </span>
+            <span className="text-slate-300">•</span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-2 h-2 rounded-full bg-[#e31837]" />
+              BACK OFFICE OPERATIONS
+            </span>
           </div>
 
-          {/* Positioning Paragraph */}
-          <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-8 max-w-xl font-normal">
-            The dedicated operations department behind your trucking business. 
-            We secure peak-rate freight, manage broker setup packets and rate confirmations, 
-            and streamline your cash flow—with 100% rate transparency and zero forced dispatch.
+          {/* Exact Positioning Copy from Company Packet */}
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-8 max-w-xl font-medium">
+            Professional dispatch and operational support helping owner-operators and small fleets run their business smoothly and profitably. We are not a broker—we are your trusted back-office partner, working behind the scenes with 100% rate transparency and zero forced dispatch.
           </p>
 
-          {/* 4 Brand Pillars (From the Official RTS Brand Package) */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10 text-xs font-semibold text-slate-200">
-            <div className="flex items-center gap-2 bg-slate-900/60 border border-slate-800/80 rounded-lg p-2.5 backdrop-blur-sm">
-              <ShieldCheck className="w-4 h-4 text-red-500 flex-shrink-0" />
-              <span>Backend Reliability</span>
-            </div>
-            <div className="flex items-center gap-2 bg-slate-900/60 border border-slate-800/80 rounded-lg p-2.5 backdrop-blur-sm">
-              <TrendingUp className="w-4 h-4 text-red-500 flex-shrink-0" />
-              <span>Load Procurement</span>
-            </div>
-            <div className="flex items-center gap-2 bg-slate-900/60 border border-slate-800/80 rounded-lg p-2.5 backdrop-blur-sm">
-              <Truck className="w-4 h-4 text-red-500 flex-shrink-0" />
-              <span>Secure Deliveries</span>
-            </div>
-            <div className="flex items-center gap-2 bg-slate-900/60 border border-slate-800/80 rounded-lg p-2.5 backdrop-blur-sm">
-              <Globe className="w-4 h-4 text-red-500 flex-shrink-0" />
-              <span>Nationwide Reach</span>
-            </div>
-          </div>
-
-          {/* Clean Primary Actions (TransAm Style) */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          {/* Primary Action Desk Buttons */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-10">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-[#e31837] hover:bg-[#c41430] text-white font-bold text-sm uppercase tracking-wider transition-all shadow-lg shadow-red-600/30 hover:shadow-red-600/50"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#e31837] hover:bg-[#c41430] text-white font-black text-xs uppercase tracking-widest transition-all shadow-lg shadow-red-600/30 hover:shadow-red-600/50"
             >
               <span>Request Dispatch Rate</span>
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
-              href="#equipment"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-white font-semibold text-sm tracking-wider border border-slate-700 transition backdrop-blur-sm"
+              href="tel:15199376622"
+              className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-900 font-bold text-xs uppercase tracking-wider border border-slate-300 shadow-sm transition"
             >
-              <span>Equipment & Lanes</span>
-              <ArrowRight className="w-4 h-4 text-slate-400" />
+              <Phone className="w-4 h-4 text-[#e31837]" />
+              <span>Call Operations: +1 (519) 937-6622</span>
             </a>
+          </div>
+
+          {/* 4 Brand Pillars (Bottom of Company Packet Page 1) */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl text-xs font-bold text-slate-800">
+            <div className="flex items-center gap-2.5 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-xl p-3 shadow-sm hover:border-red-300 transition">
+              <Headphones className="w-4 h-4 text-[#e31837] flex-shrink-0" />
+              <span>Dedicated Support</span>
+            </div>
+            <div className="flex items-center gap-2.5 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-xl p-3 shadow-sm hover:border-red-300 transition">
+              <ClipboardCheck className="w-4 h-4 text-[#e31837] flex-shrink-0" />
+              <span>Reliable Operations</span>
+            </div>
+            <div className="flex items-center gap-2.5 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-xl p-3 shadow-sm hover:border-red-300 transition">
+              <Globe2 className="w-4 h-4 text-[#e31837] flex-shrink-0" />
+              <span>Nationwide Coverage</span>
+            </div>
+            <div className="flex items-center gap-2.5 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-xl p-3 shadow-sm hover:border-red-300 transition">
+              <Handshake className="w-4 h-4 text-[#e31837] flex-shrink-0" />
+              <span>Partner Focused</span>
+            </div>
           </div>
         </div>
       </div>
