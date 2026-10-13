@@ -19,7 +19,21 @@ export function Logo({ variant = "navbar", className = "" }: LogoProps) {
     )
   }
 
-  // Default navbar and horizontal logo: crisp transparent 3D metallic RTS mark
+  // Bright navbar logo for dark header: gleaming white R, vibrant red T, gleaming white S
+  if (variant === "navbar") {
+    return (
+      <Image
+        src="/assets/branding/rts-mark-dark-nav.png"
+        alt="RTS - Radiance Trucking Solutions LLP"
+        width={180}
+        height={50}
+        className={`object-contain h-10 sm:h-12 w-auto ${className}`}
+        priority
+      />
+    )
+  }
+
+  // Default light background mark
   return (
     <Image
       src="/assets/branding/rts-mark-transparent.png"
