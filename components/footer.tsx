@@ -76,7 +76,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#quote" className="hover:text-white transition">
+                <a href="#contact" className="hover:text-white transition">
                   Instant Rate & Dispatch Inquiries
                 </a>
               </li>

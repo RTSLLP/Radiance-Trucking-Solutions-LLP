@@ -74,7 +74,7 @@ export function EnterpriseHero() {
           {/* Clean Primary Actions (TransAm Style) */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             <a
-              href="#quote"
+              href="#contact"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-[#e31837] hover:bg-[#c41430] text-white font-bold text-sm uppercase tracking-wider transition-all shadow-lg shadow-red-600/30 hover:shadow-red-600/50"
             >
               <span>Request Dispatch Rate</span>

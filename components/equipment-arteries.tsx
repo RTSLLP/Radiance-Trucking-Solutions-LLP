@@ -155,7 +155,7 @@ export function EquipmentArteries() {
 
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
                   <a
-                    href="#quote"
+                    href="#contact"
                     className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#e31837] hover:text-[#b31229] transition"
                   >
                     <span>Request Lane Rate for {item.title}</span>
@@ -218,7 +218,7 @@ export function EquipmentArteries() {
                 <span>Call Kitchener Desk</span>
               </a>
               <a
-                href="#quote"
+                href="#contact"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#e31837] hover:bg-[#c41430] text-white font-bold text-xs uppercase tracking-wider transition shadow-md shadow-red-600/30"
               >
                 <span>Instant Rate Inquiry</span>
